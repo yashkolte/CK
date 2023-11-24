@@ -22613,11 +22613,29 @@ Gallery Item
 }
 
 .sidenav-left {
-  position: sticky;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
+  position: fixed;
+  top: 85%;
+  left: 2%;
+  /* transform: translateY(-50%); */
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  transform: rotate(-50deg);
   z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.sidenav-left img {
+  height: 80%;
+  width: 80%;
+  /* padding-right: 15px; */
 }
 
 .sidenav-right {

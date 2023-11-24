@@ -998,4 +998,31 @@ nextBtn.addEventListener('click', () => {
     divRotate.style.transform = `rotate(${currentRotation}deg)`;
 });
 
-document.getElementById("pose").addEventListener("mouseover").style.cssText = `top: 50%`;
+const pose = document.querySelector("#pose");
+
+document.querySelector(".animate-home").addEventListener("mouseover", ()=> {
+  gsap.to("#pose", {
+    duration: 2,
+    y: -80,
+    ease: "bounce"
+})
+});
+
+
+document.querySelector(".animate-home").addEventListener("mouseleave", ()=> {
+  gsap.to("#pose", {
+    duration: 2,
+    y: 0,
+    ease: "bounce"
+})
+});
+
+const rocket = document.querySelector(".sidenav-left img");
+
+rocket.addEventListener("click", ()=> {
+  gsap.to("#pose", {
+    duration: 2,
+    y: 100,
+    ease: "bounce"
+})
+});
