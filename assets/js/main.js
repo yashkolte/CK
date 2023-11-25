@@ -1,53 +1,81 @@
 let tl = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".edu-pricing-area",
-        start: "center center",
-        end: "=+1000px",
-        scrub: 1,
+  scrollTrigger: {
+    trigger: ".edu-pricing-area",
+    start: "center center",
+    end: "=+1000px",
+    scrub: 1,
     // markers: true,
   },
 });
 
-tl.to(".project-shape", {
-  duration: 3,
-  rotate: "-50deg",
-  ease: "power1",
-},"same");
+tl.to(
+  ".project-shape",
+  {
+    duration: 3,
+    rotate: "-50deg",
+    ease: "power1",
+  },
+  "same"
+);
 
-tl.to(".project-shape-top", {
-  duration: 3,
-  rotate: "50deg",
-  ease: "power1",
-},"same");
+tl.to(
+  ".project-shape-top",
+  {
+    duration: 3,
+    rotate: "50deg",
+    ease: "power1",
+  },
+  "same"
+);
 
-tl.to(".project-shape-2", {
-  duration: 3,
-  rotate: "30deg",
-  ease: "power1",
-},"same");
+tl.to(
+  ".project-shape-2",
+  {
+    duration: 3,
+    rotate: "30deg",
+    ease: "power1",
+  },
+  "same"
+);
 
 const rotationTimeline = gsap.timeline({
-    repeat: -1, // Repeat the animation indefinitely
-    repeatDelay: 3, // Delay between repetitions
-  });
-  
-  rotationTimeline.to(".animate-home .container", { // Target the element with the class "element"
-    rotate: 90, // Rotate the element 50 degrees
-    duration: 3, // Set the duration of the rotation animation to 3 seconds
-    ease: "power2.inOut", // Use a smooth easing function
-  });
-  
+  repeat: -1, // Repeat the animation indefinitely
+  repeatDelay: 4, // Delay between repetitions
+});
+
+rotationTimeline.to(".animate-home .container", {
+  // Target the element with the class "element"
+  rotate: 90, // Rotate the element 50 degrees
+  duration: 4, // Set the duration of the rotation animation to 3 seconds
+  ease: "power2.inOut", // Use a smooth easing function
+});
+rotationTimeline.to(".animate-home .container", {
+  // Target the element with the class "element"
+  rotate: 180, // Rotate the element 50 degrees
+  duration: 4, // Set the duration of the rotation animation to 3 seconds
+  ease: "power2.inOut", // Use a smooth easing function
+});
+rotationTimeline.to(".animate-home .container", {
+  // Target the element with the class "element"
+  rotate: 270, // Rotate the element 50 degrees
+  duration: 4, // Set the duration of the rotation animation to 3 seconds
+  ease: "power2.inOut", // Use a smooth easing function
+});
+rotationTimeline.to(".animate-home .container", {
+  // Target the element with the class "element"
+  rotate: 360, // Rotate the element 50 degrees
+  duration: 4, // Set the duration of the rotation animation to 3 seconds
+  ease: "power2.inOut", // Use a smooth easing function
+});
+
+
+
 //   gsap.to(".animate-home .container", {
 //     rotationZ: 360,
 //     duration: 30,
 //     ease: "linear",
 //     repeat: -1, // Repeat the animation infinitely
 //   })
-
-
-
-
-
 
 (function (window, document, $, undefined) {
   "use strict";
@@ -881,70 +909,38 @@ const rotationTimeline = gsap.timeline({
   eduvibeJs.i();
 })(window, document, jQuery);
 
-// document.getElementById("imgBx").addEventListener("mouseover", Hover);
-// document.getElementById("imgBx").addEventListener("mouseleave", NotHover);
-
-// document.getElementById("imgBx-3").addEventListener("mouseover", Hover3);
-// document.getElementById("imgBx-3").addEventListener("mouseleave", NotHover3);
-
-// function Hover() {
-//     document.querySelector(".imgBx img:nth-child(1)").style.cssText  = "transform: rotate(-10deg); left: -50%";
-//     document.querySelector(".imgBx img:nth-child(3)").style.cssText  = "transform: rotate(10deg); left: 50% !important";
-//     document.getElementById("imgBx").style.transition = "all 0.5s ease";
-// }
-
-// function NotHover() {
-//     document.querySelector(".imgBx img:nth-child(1)").style.cssText  = "  transform: rotate(0deg);";
-//     document.querySelector(".imgBx img:nth-child(3)").style.cssText  = "  transform: rotate(0deg);";
-//     document.getElementById("imgBx").style.transition = "all 0.5s ease";
-// }
-
-// document.getElementById("imgBx-2").addEventListener("mouseover", Hover2);
-// document.getElementById("imgBx-2").addEventListener("mouseleave", NotHover2);
-
-// function Hover2() {
-//     document.querySelector("#imgBx-2 img:nth-child(1)").style.cssText  = "transform: rotate(-10deg); left: -50%";
-//     document.querySelector("#imgBx-2 img:nth-child(3)").style.cssText  = "transform: rotate(10deg); left: 50% !important";
-//     document.getElementById("imgBx").style.transition = "all 0.5s ease";
-// }
-
-// function NotHover2() {
-//     document.querySelector("#imgBx-2 img:nth-child(1)").style.cssText  = "  transform: rotate(0deg);";
-//     document.querySelector("#imgBx-2 img:nth-child(3)").style.cssText  = "  transform: rotate(0deg);";
-//     document.getElementById("imgBx-2").style.transition = "all 0.5s ease";
-// }
-// function Hover3() {
-//     document.querySelector("#imgBx-3 img:nth-child(1)").style.cssText  = "transform: rotate(-10deg); left: -50%";
-//     document.querySelector("#imgBx-3 img:nth-child(3)").style.cssText  = "transform: rotate(10deg); left: 50% !important";
-//     document.getElementById("imgBx-3").style.transition = "all 0.5s ease";
-// }
-
-// function NotHover3() {
-//     document.querySelector("#imgBx-3 img:nth-child(1)").style.cssText  = "  transform: rotate(0deg);";
-//     document.querySelector("#imgBx-3 img:nth-child(3)").style.cssText  = "  transform: rotate(0deg);";
-//     document.getElementById("imgBx-3").style.transition = "all 0.5s ease";
-// }
 
 const imgBoxes = document.querySelectorAll(".imgBx");
 
 function applyHoverEffect(imgBox) {
-  imgBox.querySelector(
-    "img:nth-child(1)"
-  ).style.cssText = `transform: rotate(-10deg); left: -50%`;
-  imgBox.querySelector(
-    "img:nth-child(3)"
-  ).style.cssText = `transform: rotate(10deg); left: 50% !important`;
-  imgBox.style.transition = "all 0.5s ease";
+  gsap.to(imgBox.querySelector("img:nth-child(1)"), {
+    duration: 0.5,
+    ease: "ease",
+    transform: "rotate(-5deg) translateX(-50%)"
+  });
+
+  gsap.to(imgBox.querySelector("img:nth-child(3)"), {
+    duration: 0.5,
+    ease: "ease",
+    transform: "rotate(5deg) translateX(50%)",
+    overwrite: "auto"
+  });
 }
 
 function removeHoverEffect(imgBox) {
-  imgBox.querySelector(
-    "img:nth-child(1)"
-  ).style.cssText = `transform: rotate(0deg)`;
-  imgBox.querySelector(
-    "img:nth-child(3)"
-  ).style.cssText = `transform: rotate(0deg)`;
-  imgBox.style.transition = "all 0.5s ease";
+  gsap.to(imgBox.querySelector("img:nth-child(1)"), {
+    duration: 0.5,
+    scale: 0.8,
+    ease: "ease",
+    transform: "rotate(0deg)"
+  });
+
+  gsap.to(imgBox.querySelector("img:nth-child(3)"), {
+    duration: 0.5,
+    scale: 0.8,
+    ease: "ease",
+    transform: "rotate(0deg)"
+  });
 }
 
 imgBoxes.forEach((imgBox) => {
@@ -980,49 +976,53 @@ function enableOverlayForm() {
 }
 function disableOverlayForm() {
   overlayForm.style.display = "none";
+  gsap.to(".sidenav-left", {
+    duration: 2,
+    y: 0,
+    // ease: "bounce",
+  });
 }
 
-const previousBtn = document.getElementById('previousBtn');
-const nextBtn = document.getElementById('nextBtn');
+const previousBtn = document.getElementById("previousBtn");
+const nextBtn = document.getElementById("nextBtn");
 const divRotate = document.querySelector(".animate-home .container");
 
 let currentRotation = 0;
 
-previousBtn.addEventListener('click', () => {
-    currentRotation -= 90;
-    divRotate.style.transform = `rotate(${currentRotation}deg)`;
+previousBtn.addEventListener("click", () => {
+  currentRotation -= 90;
+  divRotate.style.transform = `rotate(${currentRotation}deg)`;
 });
 
-nextBtn.addEventListener('click', () => {
-    currentRotation += 90;
-    divRotate.style.transform = `rotate(${currentRotation}deg)`;
+nextBtn.addEventListener("click", () => {
+  currentRotation += 90;
+  divRotate.style.transform = `rotate(${currentRotation}deg)`;
 });
 
 const pose = document.querySelector("#pose");
 
-document.querySelector(".animate-home").addEventListener("mouseover", ()=> {
+document.querySelector(".animate-home").addEventListener("mouseover", () => {
   gsap.to("#pose", {
     duration: 2,
     y: -80,
-    ease: "bounce"
-})
+    ease: "bounce",
+  });
 });
 
-
-document.querySelector(".animate-home").addEventListener("mouseleave", ()=> {
+document.querySelector(".animate-home").addEventListener("mouseleave", () => {
   gsap.to("#pose", {
     duration: 2,
     y: 0,
-    ease: "bounce"
-})
+    ease: "bounce",
+  });
 });
 
-const rocket = document.querySelector(".sidenav-left img");
-
-rocket.addEventListener("click", ()=> {
-  gsap.to("#pose", {
+document.querySelector(".sidenav-left img").addEventListener("click", () => {
+  gsap.to(".sidenav-left", {
     duration: 2,
-    y: 100,
-    ease: "bounce"
-})
+    y: -1000,
+    ease: "bounce",
+  });
+  overlayForm.style.display = "flex";
 });
+

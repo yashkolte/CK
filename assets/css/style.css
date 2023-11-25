@@ -105,7 +105,7 @@
 }
 
 :root {
-  --color-primary: #525fe1;
+  --color-primary: #000;
   --color-secondary: #f86f03;
   --color-secondary-alt: #fff6f4;
   --color-tertiary: #ffa41b;
@@ -22565,7 +22565,7 @@ Gallery Item
 
 .container-box .card .content .imgBx {
   position: relative;
-  width: 250px;
+  width: 200px;
   height: 400px;
   transition: all ease-in-out 0.5s;
   /* overflow: hidden; */
@@ -22625,11 +22625,6 @@ Gallery Item
   display: flex;
   align-items: center;
   justify-content: left;
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .sidenav-left img {
@@ -22652,12 +22647,12 @@ Gallery Item
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 12px;
   border: 1px solid rgba(209, 213, 219, 0.3);
-  padding: 0.8rem 1rem !important;
+  padding: 0.8rem 0.5rem !important;
 }
 
 .sidenav-right img {
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
 }
 
 .glass-button {
@@ -22695,28 +22690,30 @@ Gallery Item
 }
 
 .whatsapp-box {
-  background-color: white;
   z-index: 16000160 !important;
   min-width: 320px;
+  min-height: 279px;
   position: fixed !important;
   bottom: -8rem !important;
-  right: 10rem;
-  border-radius: 32px;
-  border: 2px solid #363636;
-  box-shadow: 4px 6px 0px #00e785;
+  right: 5rem;
   padding: 32px 32px 16px;
-  min-height: 279px;
+  background: rgba(255, 255, 255, 0.67);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   display: none;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 12px;
+  justify-content: center;
+
 }
 
 .wa-chat-btn-text {
   background-color: #1d1d1b !important;
-  box-shadow: 4px 4px 0px #00e785;
+  box-shadow: 4px 4px 0px #fff;
   border-radius: 8px;
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   cursor: pointer;
   position: relative;
@@ -22737,10 +22734,12 @@ Gallery Item
   top: 0;
   right: 0;
   transform: translate(50%, -50%);
-  background: #ffffff;
-  border: 1px solid #363636;
-  box-shadow: 2px 3px 0px #525fe1;
-  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.67);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 0.8rem 1rem !important;
   font-weight: 500;
   font-size: 14px;
@@ -22748,6 +22747,7 @@ Gallery Item
   color: #202020;
   cursor: pointer;
 }
+
 
 .overlayForm {
   position: fixed;
@@ -23331,3 +23331,15 @@ Gallery Item
   font-size: 5rem;
   white-space: nowrap;
 }
+
+.about-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  z-index: 3;
+}
+
+/* .about-image-overlay { */
