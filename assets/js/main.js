@@ -4,7 +4,6 @@ let tl = gsap.timeline({
     start: "center center",
     end: "=+1000px",
     scrub: 1,
-    // markers: true,
   },
 });
 
@@ -68,15 +67,6 @@ rotationTimeline.to(".animate-home .container", {
   ease: "power2.inOut", // Use a smooth easing function
 });
 
-
-
-//   gsap.to(".animate-home .container", {
-//     rotationZ: 360,
-//     duration: 30,
-//     ease: "linear",
-//     repeat: -1, // Repeat the animation infinitely
-//   })
-
 (function (window, document, $, undefined) {
   "use strict";
 
@@ -109,7 +99,6 @@ rotationTimeline.to(".animate-home .container", {
       eduvibeJs.accordionBtnTwo();
       eduvibeJs.bannerAnimation();
       eduvibeJs.popupMobileMenu();
-      eduvibeJs.searchPopup();
       eduvibeJs.bgMarque();
       eduvibeJs.filterClickButton();
       eduvibeJs.contactForm();
@@ -823,23 +812,6 @@ rotationTimeline.to(".animate-home .container", {
       });
     },
 
-    searchPopup: function () {
-      $(".search-trigger").on("click", function () {
-        $(".edu-search-popup").addClass("open");
-      });
-      $(".close-trigger").on("click", function () {
-        $(".edu-search-popup").removeClass("open");
-      });
-      $(".edu-search-popup").on("click", function () {
-        $(".edu-search-popup").removeClass("open");
-      });
-      $(".edu-search-popup .eduvibe-search-popup-field").on(
-        "click",
-        function (e) {
-          e.stopPropagation();
-        }
-      );
-    },
 
     filterClickButton: function () {
       $("#slider-range").slider({
@@ -979,7 +951,6 @@ function disableOverlayForm() {
   gsap.to(".sidenav-left", {
     duration: 2,
     y: 0,
-    // ease: "bounce",
   });
 }
 
@@ -987,16 +958,20 @@ const previousBtn = document.getElementById("previousBtn");
 const nextBtn = document.getElementById("nextBtn");
 const divRotate = document.querySelector(".animate-home .container");
 
-let currentRotation = 0;
-
 previousBtn.addEventListener("click", () => {
-  currentRotation -= 90;
-  divRotate.style.transform = `rotate(${currentRotation}deg)`;
+  rotationTimeline.to(".animate-home .container", {
+    rotate: "-90deg",
+    duration: 4,
+    ease: "power2.inOut",
+  });
 });
 
 nextBtn.addEventListener("click", () => {
-  currentRotation += 90;
-  divRotate.style.transform = `rotate(${currentRotation}deg)`;
+  rotationTimeline.to(".animate-home .container", {
+    rotate: "90deg",
+    duration: 4,
+    ease: "power2.inOut",
+  });
 });
 
 const pose = document.querySelector("#pose");
@@ -1005,7 +980,7 @@ document.querySelector(".animate-home").addEventListener("mouseover", () => {
   gsap.to("#pose", {
     duration: 2,
     y: -80,
-    ease: "bounce",
+    ease: "power2.out",
   });
 });
 
@@ -1013,7 +988,7 @@ document.querySelector(".animate-home").addEventListener("mouseleave", () => {
   gsap.to("#pose", {
     duration: 2,
     y: 0,
-    ease: "bounce",
+    ease: "power2.out",
   });
 });
 
@@ -1026,3 +1001,147 @@ document.querySelector(".sidenav-left img").addEventListener("click", () => {
   overlayForm.style.display = "flex";
 });
 
+// var swiper = new Swiper(".mySwiper", {
+//   spaceBetween: 30,
+//   centeredSlides: true,
+//   autoplay: {
+//     delay: 3000,
+//     disableOnInteraction: false,
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+// });
+
+let isHovering = false;
+
+const animation = gsap.to(".swiper-slide", {
+  repeat: -1,
+  x: "-100%",
+  duration: 15,
+  ease: "none",
+  paused: isHovering
+});
+
+$(".swiper-slide").hover(
+  function () {
+    isHovering = true;
+    animation.pause();
+  },
+  function () {
+    isHovering = false;
+    animation.play();
+  }
+);
+
+gsap.to(".b-section-marquee-box h2", {
+  repeat: -1,
+  x: "-100%",
+  duration: 15,
+  ease: "none",
+})
+
+
+// ==================== Start Contact Form ============================
+
+
+//Unique Firebase Object
+var firebaseConfig = {
+  apiKey: "AIzaSyC-AIW7NNXmpre36Uszjz2KWgU9wvKV69A",
+
+  authDomain: "ck-contact.firebaseapp.com",
+
+  projectId: "ck-contact",
+
+  storageBucket: "ck-contact.appspot.com",
+
+  messagingSenderId: "5575314637",
+
+  appId: "1:5575314637:web:6287fb66ce6d4f6aa7ed84",
+
+};
+
+//Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+var firestore = firebase.firestore();
+
+//Variable to access database collection
+const db = firestore.collection("formData");
+
+//Get Submit Form
+let submitButton = document.getElementById("btnSubmit");
+
+//Create Event Listener To Allow Form Submission
+submitButton.addEventListener("click", (e) => {
+  //Prevent Default Form Submission Behavior
+  e.preventDefault();
+
+  //Get Form Values
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  // let country = document.getElementById("country").value;
+
+  firestore
+    .collection("formData")
+    .get()
+    .then((snapshot) => {
+      snapshot.docs.forEach((doc) => {
+        const fn = doc.data().email;
+        if (email === fn) {
+          console.log("Already Exists");
+        }
+
+        // console.log("data", doc.data().fname);
+      });
+    });
+  //Save Form Data To Firebase
+  db.doc()
+    .set({
+      name: name,
+      email: email,
+      // country: country,
+    })
+    .then(() => { })
+    .catch((error) => {
+      console.log(error);
+    });
+
+  //alert
+  alert("Your Form Has Been Submitted Successfully");
+
+  //clear form after submission
+  function clearForm() {
+    document.getElementById("clearForm").reset();
+  }
+  clearForm()
+});
+
+// ==================== End Contact Form ============================
+
+document.getElementById("PopupForm")
+  .addEventListener("click", function () {
+    document.querySelector(".overlayForm")
+      .style.display = "flex";
+  });
+
+  var footer = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#footer",
+      start: "top center",
+      end: "center center",
+      scrub: 1,
+    }
+  })
+  
+  
+  footer.from(".footer-background svg path", {
+    strokeDashoffset: 230,
+    duration: 5,
+    ease: "linear",
+  });
+  

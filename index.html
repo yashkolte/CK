@@ -17,20 +17,21 @@
     <!-- CSS
 	============================================ -->
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/vendor/remixicon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" integrity="sha512-HXXR0l2yMwHDrDyxJbrMD9eLvPe3z3qL3PPeozNTsiHJEENxx8DH2CxmV05iwG0dwoz5n4gQZQyYLUNt1Wdgfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/vendor/eduvibe-font.css">
     <link rel="stylesheet" href="assets/css/vendor/magnifypopup.css">
     <link rel="stylesheet" href="assets/css/vendor/slick.css">
     <link rel="stylesheet" href="assets/css/vendor/odometer.css">
     <link rel="stylesheet" href="assets/css/vendor/lightbox.css">
     <link rel="stylesheet" href="assets/css/vendor/animation.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/vendor/jqueru-ui-min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
     <div class="background"></div>
-    
+
     <div class="main-wrapper">
         <!-- <div class="background">
             <span></span>
@@ -77,13 +78,12 @@
                         <ul class="mainmenu">
                             <li><a href="#">Home</a>
                             </li>
-                            <li><a href="#"> About</a></li>
-                            <li><a href=""> Courses</a></li>
+                            <li><a href="#About-Section"> About</a></li>
+                            <li><a href="#Course-Section"> Courses</a></li>
                             <li class="d-flex align-items-center ml--50">
                                 <div class="header-menu-bar">
                                     <div class="quote-icon quote-search">
-                                        <button class="white-box-icon search-trigger header-search"><i
-                                                class="ri-search-line"></i></button>
+                                        <button class="btn btn-dark btn-lg" id="PopupForm">Get Register</button>
                                     </div>
 
                                 </div>
@@ -213,15 +213,6 @@
         </div>
         <!-- Start Search Popup  -->
         <div class="edu-search-popup">
-            <div class="close-button">
-                <button class="close-trigger"><i class="ri-close-line"></i></button>
-            </div>
-            <div class="inner">
-                <form class="search-form" action="#">
-                    <input type="text" class="eduvibe-search-popup-field" placeholder="Search Here...">
-                    <button class="submit-button"><i class="icon-search-line"></i></button>
-                </form>
-            </div>
         </div>
         <!-- End Search Popup  -->
 
@@ -230,25 +221,32 @@
         </div>
         <div class="sidenav-right">
             <div class="whatsapp-box">
-                <i class="ri-close-circle-fill"  id="wp-close"></i>
+                <i class="ri-close-circle-fill" id="wp-close"></i>
                 <div class="wa-chat-box d-flex flex-column gap-5">
                     <!-- <img class="wa-chat-box-brand"src="https://cdn.clare.ai/wati/images/WATI_logo_square_2.png">  -->
-                    <svg class="text-dark" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block;">
-                        <path d="M20.4115 3.48832C18.3715 1.44747 15.6592 0.217606 12.7798 0.0277473C9.90046 -0.162111 7.0502 0.700979 4.75984 2.4563C2.46948 4.21162 0.895133 6.73951 0.329958 9.56926C-0.235217 12.399 0.247308 15.3377 1.68768 17.8382L0 24.0006L6.30648 22.347C8.05076 23.2969 10.0052 23.7946 11.9914 23.7947H11.9964C14.3489 23.7945 16.6486 23.0969 18.6047 21.7899C20.5609 20.483 22.0856 18.6255 22.9862 16.4522C23.8869 14.2788 24.123 11.8873 23.6647 9.57981C23.2064 7.27233 22.0743 5.15252 20.4115 3.48832ZM11.9964 21.7862H11.9926C10.2218 21.7863 8.48364 21.3103 6.96 20.4081L6.5988 20.194L2.856 21.1751L3.85512 17.5271L3.61968 17.1532C2.45438 15.2963 1.93921 13.1048 2.15515 10.9232C2.37109 8.74163 3.3059 6.69365 4.81262 5.10125C6.31934 3.50884 8.31253 2.4623 10.4789 2.12614C12.6452 1.78999 14.8618 2.18328 16.7802 3.2442C18.6987 4.30511 20.2102 5.97349 21.0771 7.98705C21.944 10.0006 22.1172 12.2452 21.5694 14.3679C21.0216 16.4906 19.784 18.3711 18.051 19.7138C16.318 21.0564 14.1879 21.7851 11.9957 21.7852L11.9964 21.7862Z" fill="#E0E0E0"></path>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.05653 6.84318C8.83645 6.35382 8.60461 6.34398 8.39533 6.33558C8.22397 6.32814 8.02789 6.32862 7.83229 6.32862C7.68338 6.33255 7.5369 6.36725 7.40205 6.43052C7.26719 6.4938 7.14689 6.58429 7.04869 6.6963C6.71644 7.01089 6.45337 7.39126 6.27627 7.81315C6.09917 8.23505 6.01191 8.68921 6.02005 9.1467C6.02005 10.5925 7.07317 11.9895 7.22005 12.1856C7.36693 12.3817 9.25285 15.4431 12.2394 16.6208C14.7215 17.5995 15.2267 17.4049 15.7655 17.3559C16.3043 17.3069 17.5038 16.6453 17.7489 15.9591C17.9939 15.2729 17.9937 14.6849 17.9202 14.5621C17.8468 14.4392 17.6509 14.3662 17.3569 14.2191C17.0629 14.072 15.6186 13.3611 15.3491 13.2632C15.0796 13.1653 14.8837 13.1163 14.6879 13.4105C14.4921 13.7048 13.9293 14.366 13.7577 14.5625C13.5861 14.7591 13.4147 14.7833 13.1209 14.6365C12.2547 14.2911 11.4552 13.7977 10.7581 13.1782C10.1157 12.5845 9.56482 11.8988 9.12349 11.1435C8.95213 10.8497 9.10501 10.6904 9.25261 10.5435C9.38461 10.412 9.54637 10.2005 9.69349 10.0289C9.81408 9.88041 9.91291 9.71548 9.98701 9.5391C10.0261 9.45807 10.0444 9.36855 10.0403 9.27866C10.0361 9.18877 10.0095 9.10134 9.96301 9.0243C9.88885 8.87718 9.31765 7.42422 9.05653 6.84318Z" fill="white"></path>
-                        <path d="M20.314 3.44995C18.2979 1.43114 15.6165 0.214135 12.7696 0.0256927C9.92272 -0.16275 7.10439 0.690221 4.83975 2.42568C2.57511 4.16114 1.01862 6.66071 0.46029 9.45869C-0.0980434 12.2567 0.37986 15.1622 1.80496 17.6339L0.136719 23.7268L6.37072 22.0922C8.09496 23.0312 10.027 23.5232 11.9903 23.5233H11.9954C14.3211 23.5235 16.5946 22.834 18.5285 21.5422C20.4624 20.2503 21.9699 18.414 22.8603 16.2655C23.7506 14.117 23.984 11.7527 23.5307 9.47156C23.0775 7.19043 21.9581 5.09491 20.314 3.44995ZM11.9954 21.5378H11.9927C10.2423 21.5379 8.52396 21.0674 7.01776 20.1755L6.66064 19.9639L2.96032 20.9337L3.94792 17.327L3.71536 16.9574C2.56347 15.1217 2.05427 12.9553 2.2678 10.7987C2.48133 8.64215 3.40549 6.61767 4.89499 5.04356C6.3845 3.46944 8.35488 2.43495 10.4964 2.1027C12.6379 1.77046 14.8291 2.15931 16.7255 3.20812C18.622 4.25693 20.1161 5.90623 20.973 7.89674C21.83 9.88725 22.0011 12.1061 21.4596 14.2045C20.918 16.3029 19.6945 18.1618 17.9813 19.489C16.2682 20.8162 14.1625 21.5365 11.9954 21.5366V21.5378Z" fill="white"></path>
+                    <svg class="text" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" style="display: block;">
+                        <path
+                            d="M20.4115 3.48832C18.3715 1.44747 15.6592 0.217606 12.7798 0.0277473C9.90046 -0.162111 7.0502 0.700979 4.75984 2.4563C2.46948 4.21162 0.895133 6.73951 0.329958 9.56926C-0.235217 12.399 0.247308 15.3377 1.68768 17.8382L0 24.0006L6.30648 22.347C8.05076 23.2969 10.0052 23.7946 11.9914 23.7947H11.9964C14.3489 23.7945 16.6486 23.0969 18.6047 21.7899C20.5609 20.483 22.0856 18.6255 22.9862 16.4522C23.8869 14.2788 24.123 11.8873 23.6647 9.57981C23.2064 7.27233 22.0743 5.15252 20.4115 3.48832ZM11.9964 21.7862H11.9926C10.2218 21.7863 8.48364 21.3103 6.96 20.4081L6.5988 20.194L2.856 21.1751L3.85512 17.5271L3.61968 17.1532C2.45438 15.2963 1.93921 13.1048 2.15515 10.9232C2.37109 8.74163 3.3059 6.69365 4.81262 5.10125C6.31934 3.50884 8.31253 2.4623 10.4789 2.12614C12.6452 1.78999 14.8618 2.18328 16.7802 3.2442C18.6987 4.30511 20.2102 5.97349 21.0771 7.98705C21.944 10.0006 22.1172 12.2452 21.5694 14.3679C21.0216 16.4906 19.784 18.3711 18.051 19.7138C16.318 21.0564 14.1879 21.7851 11.9957 21.7852L11.9964 21.7862Z"
+                            fill="#E0E0E0"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M9.05653 6.84318C8.83645 6.35382 8.60461 6.34398 8.39533 6.33558C8.22397 6.32814 8.02789 6.32862 7.83229 6.32862C7.68338 6.33255 7.5369 6.36725 7.40205 6.43052C7.26719 6.4938 7.14689 6.58429 7.04869 6.6963C6.71644 7.01089 6.45337 7.39126 6.27627 7.81315C6.09917 8.23505 6.01191 8.68921 6.02005 9.1467C6.02005 10.5925 7.07317 11.9895 7.22005 12.1856C7.36693 12.3817 9.25285 15.4431 12.2394 16.6208C14.7215 17.5995 15.2267 17.4049 15.7655 17.3559C16.3043 17.3069 17.5038 16.6453 17.7489 15.9591C17.9939 15.2729 17.9937 14.6849 17.9202 14.5621C17.8468 14.4392 17.6509 14.3662 17.3569 14.2191C17.0629 14.072 15.6186 13.3611 15.3491 13.2632C15.0796 13.1653 14.8837 13.1163 14.6879 13.4105C14.4921 13.7048 13.9293 14.366 13.7577 14.5625C13.5861 14.7591 13.4147 14.7833 13.1209 14.6365C12.2547 14.2911 11.4552 13.7977 10.7581 13.1782C10.1157 12.5845 9.56482 11.8988 9.12349 11.1435C8.95213 10.8497 9.10501 10.6904 9.25261 10.5435C9.38461 10.412 9.54637 10.2005 9.69349 10.0289C9.81408 9.88041 9.91291 9.71548 9.98701 9.5391C10.0261 9.45807 10.0444 9.36855 10.0403 9.27866C10.0361 9.18877 10.0095 9.10134 9.96301 9.0243C9.88885 8.87718 9.31765 7.42422 9.05653 6.84318Z"
+                            fill="white"></path>
+                        <path
+                            d="M20.314 3.44995C18.2979 1.43114 15.6165 0.214135 12.7696 0.0256927C9.92272 -0.16275 7.10439 0.690221 4.83975 2.42568C2.57511 4.16114 1.01862 6.66071 0.46029 9.45869C-0.0980434 12.2567 0.37986 15.1622 1.80496 17.6339L0.136719 23.7268L6.37072 22.0922C8.09496 23.0312 10.027 23.5232 11.9903 23.5233H11.9954C14.3211 23.5235 16.5946 22.834 18.5285 21.5422C20.4624 20.2503 21.9699 18.414 22.8603 16.2655C23.7506 14.117 23.984 11.7527 23.5307 9.47156C23.0775 7.19043 21.9581 5.09491 20.314 3.44995ZM11.9954 21.5378H11.9927C10.2423 21.5379 8.52396 21.0674 7.01776 20.1755L6.66064 19.9639L2.96032 20.9337L3.94792 17.327L3.71536 16.9574C2.56347 15.1217 2.05427 12.9553 2.2678 10.7987C2.48133 8.64215 3.40549 6.61767 4.89499 5.04356C6.3845 3.46944 8.35488 2.43495 10.4964 2.1027C12.6379 1.77046 14.8291 2.15931 16.7255 3.20812C18.622 4.25693 20.1161 5.90623 20.973 7.89674C21.83 9.88725 22.0011 12.1061 21.4596 14.2045C20.918 16.3029 19.6945 18.1618 17.9813 19.489C16.2682 20.8162 14.1625 21.5365 11.9954 21.5366V21.5378Z"
+                            fill="white"></path>
                     </svg>
-       
+
                     <div class="wa-chat-box-content ">
                         <p class="text-dark">
                             I have some questions, <br>can you help?
                         </p>
                     </div>
-       
+
                     <a role="button" target="_blank" href="#" title="WhatsApp">
-                           <span class="wa-chat-btn-text">Start Chat</span>
-                     </a>
-               </div>
+                        <span class="wa-chat-btn-text">Start Chat</span>
+                    </a>
+                </div>
             </div>
 
             <a id="wp-button" href="#">
@@ -259,30 +257,31 @@
             </a>
         </div>
         <div class="overlayForm">
-            <div class="overlayFormCenter">
+            <div class="overlayFormCenter glass">
                 <i class="ri-close-circle-fill" id="form-close"></i>
                 <div class="left">
                     <img src="./assets/images/Frame 33.png" alt="">
                 </div>
                 <div class="right">
-                    <form style="width: 22rem;">
+                    <form id="clearForm" style="width: 22rem;">
                         <h5><span style="font-size: 6rem">10%<br> OFF</span><br> ON YOUR FIRST PURCHASE</h5>
                         <!-- Name input -->
                         <div data-mdb-input-init class="form-outline mb-4">
-                          <input type="text" id="form5Example1" class="form-control" />
-                          <label class="form-label" for="form5Example1">Name</label>
+                            <input type="text" id="name" class="form-control" />
+                            <label class="form-label" for="form5Example1">Name</label>
                         </div>
-                      
+
                         <!-- Email input -->
                         <div data-mdb-input-init class="form-outline mb-4">
-                          <input type="email" id="form5Example2" class="form-control" />
-                          <label class="form-label" for="form5Example2">Email address</label>
+                            <input type="email" id="email" class="form-control" />
+                            <label class="form-label" for="form5Example2">Email address</label>
                         </div>
-                      
+
                         <!-- Submit button -->
-                        <button data-mdb-ripple-init type="button" class="btn btn-primary btn-block mb-4">Get My 10% OFF</button>
-                      </form>
-                      
+                        <button data-mdb-ripple-init type="button" id="btnSubmit"
+                            class="btn btn-primary btn-block mb-4">Get My 10% OFF</button>
+                    </form>
+
                 </div>
             </div>
         </div>
@@ -313,7 +312,8 @@
                         </div>
                         <div class="col-lg-6 order-1 order-lg-2">
                             <div class="banner-image rounded-3">
-                                <div class="img-fluid" data-sal-delay="150" data-sal="fade" data-sal-duration="800"><img style="border-radius: 15px;"
+                                <div class="img-fluid" data-sal-delay="150" data-sal="fade" data-sal-duration="800"><img
+                                        style="border-radius: 15px;"
                                         src="./assets/images/WhatsApp Image 2023-11-20 at 15.47.44_0c3f3bdd.jpg"
                                         alt="Banner Images" /></div>
 
@@ -324,81 +324,16 @@
                 </div>
             </div>
 
-            <section class="b-section">
-                <div id="bg-wrap">
-                    <!-- <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" style="height: 100%; width:100%">
-                        <defs>
-                            <radialGradient id="Gradient1" cx="50%" cy="50%" fx="0.441602%" fy="50%" r=".5">
-                                <animate attributeName="fx" dur="34s" values="0%;3%;0%" repeatCount="indefinite">
-                                </animate>
-                                <stop offset="0%" stop-color="rgba(255, 0, 255, 1)"></stop>
-                                <stop offset="100%" stop-color="rgba(255, 0, 255, 0)"></stop>
-                            </radialGradient>
-                            <radialGradient id="Gradient2" cx="50%" cy="50%" fx="2.68147%" fy="50%" r=".5">
-                                <animate attributeName="fx" dur="23.5s" values="0%;3%;0%" repeatCount="indefinite">
-                                </animate>
-                                <stop offset="0%" stop-color="rgba(255, 255, 0, 1)"></stop>
-                                <stop offset="100%" stop-color="rgba(255, 255, 0, 0)"></stop>
-                            </radialGradient>
-                            <radialGradient id="Gradient3" cx="50%" cy="50%" fx="0.836536%" fy="50%" r=".5">
-                                <animate attributeName="fx" dur="21.5s" values="0%;3%;0%" repeatCount="indefinite">
-                                </animate>
-                                <stop offset="0%" stop-color="rgba(0, 255, 255, 1)"></stop>
-                                <stop offset="100%" stop-color="rgba(0, 255, 255, 0)"></stop>
-                            </radialGradient>
-                            <radialGradient id="Gradient4" cx="50%" cy="50%" fx="4.56417%" fy="50%" r=".5">
-                                <animate attributeName="fx" dur="23s" values="0%;5%;0%" repeatCount="indefinite">
-                                </animate>
-                                <stop offset="0%" stop-color="rgba(0, 255, 0, 1)"></stop>
-                                <stop offset="100%" stop-color="rgba(0, 255, 0, 0)"></stop>
-                            </radialGradient>
-                            <radialGradient id="Gradient5" cx="50%" cy="50%" fx="2.65405%" fy="50%" r=".5">
-                                <animate attributeName="fx" dur="24.5s" values="0%;5%;0%" repeatCount="indefinite">
-                                </animate>
-                                <stop offset="0%" stop-color="rgba(0,0,255, 1)"></stop>
-                                <stop offset="100%" stop-color="rgba(0,0,255, 0)"></stop>
-                            </radialGradient>
-                            <radialGradient id="Gradient6" cx="50%" cy="50%" fx="0.981338%" fy="50%" r=".5">
-                                <animate attributeName="fx" dur="25.5s" values="0%;5%;0%" repeatCount="indefinite">
-                                </animate>
-                                <stop offset="0%" stop-color="rgba(255,0,0, 1)"></stop>
-                                <stop offset="100%" stop-color="rgba(255,0,0, 0)"></stop>
-                            </radialGradient>
-                        </defs>
-                        <rect x="13.744%" y="1.18473%" width="100%" height="100%" fill="url(#Gradient1)"
-                            transform="rotate(334.41 50 50)">
-                            <animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite"></animate>
-                            <animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite"></animate>
-                            <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50"
-                                dur="7s" repeatCount="indefinite"></animateTransform>
-                        </rect>
-                        <rect x="-2.17916%" y="35.4267%" width="100%" height="100%" fill="url(#Gradient2)"
-                            transform="rotate(255.072 50 50)">
-                            <animate attributeName="x" dur="23s" values="-25%;0%;-25%" repeatCount="indefinite">
-                            </animate>
-                            <animate attributeName="y" dur="24s" values="0%;50%;0%" repeatCount="indefinite"></animate>
-                            <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50"
-                                dur="12s" repeatCount="indefinite"></animateTransform>
-                        </rect>
-                        <rect x="9.00483%" y="14.5733%" width="100%" height="100%" fill="url(#Gradient3)"
-                            transform="rotate(139.903 50 50)">
-                            <animate attributeName="x" dur="25s" values="0%;25%;0%" repeatCount="indefinite"></animate>
-                            <animate attributeName="y" dur="12s" values="0%;25%;0%" repeatCount="indefinite"></animate>
-                            <animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50"
-                                dur="9s" repeatCount="indefinite"></animateTransform>
-                        </rect>
-                    </svg> -->
-                </div>
-            </section>
         </div>
-        <div class="b-section-marquee-box glass">
+        <div class="b-section b-section-marquee-box glass">
             <h2 class="marquee-text">learn WordPress •</h2>
             <h2 class="marquee-text">learn WordPress •</h2>
         </div>
         <!-- End Sldier Area  -->
 
         <!-- Start Courses Area  -->
-        <div class="edu-pricing-area eduvibe-pricing-plan-page edu-section-gap bg-image bg-image--26">
+        <div id="Course-Section"
+            class="edu-pricing-area eduvibe-pricing-plan-page edu-section-gap bg-image bg-image--26">
             <div class="container eduvibe-animated-shape">
                 <div class="row g-5">
                     <div class="col-lg-12 col-md-6">
@@ -410,11 +345,11 @@
                     </div>
                 </div>
 
-                <div class="row g-5 mt--20">
+                <div class="row g-5 mt--20 mobile-fix">
 
                     <!-- Start Pricing Table  -->
-                    <div class="col-xl-4 col-lg-6 col-md-6 col-12 position-relative" data-sal-delay="150" data-sal="slide-up"
-                        data-sal-duration="800">
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-12 position-relative " data-sal-delay="150"
+                        data-sal="slide-up" data-sal-duration="800">
                         <div class="project-shape-top">
                             <img src="./assets/images/Element 2.png" alt="">
                         </div>
@@ -464,8 +399,8 @@
                     <!-- End Pricing Table  -->
 
                     <!-- Start Pricing Table  -->
-                    <div class="col-xl-4 col-lg-6 col-md-6 col-12 position-relative" data-sal-delay="200" data-sal="slide-up"
-                        data-sal-duration="800">
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-12 position-relative" data-sal-delay="200"
+                        data-sal="slide-up" data-sal-duration="800">
                         <div class="project-shape-2">
                             <img src="./assets/images/Element 3.png" alt="">
                         </div>
@@ -512,8 +447,8 @@
                     <!-- End Pricing Table  -->
 
                     <!-- Start Pricing Table  -->
-                    <div class="col-xl-4 col-lg-6 col-md-6 col-12 position-relative" data-sal-delay="250" data-sal="slide-up"
-                        data-sal-duration="800">
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-12 position-relative" data-sal-delay="250"
+                        data-sal="slide-up" data-sal-duration="800">
 
                         <div class="project-shape">
                             <img src="./assets/images/Element1.png" alt="">
@@ -572,7 +507,7 @@
                     <div class="about-image-gallery">
                         <div class="eduvibe-about-1-img-wrapper position-relative">
                             <div class="about-image-overlay">
-                                    <img class="image-1" src="./assets/images/Frame 33.png" alt="About Images">
+                                <img class="image-1" src="./assets/images/Frame 33.png" alt="About Images">
                             </div>
                             <img class="image-1" src="./assets/images/Frame 33.png" alt="About Images">
                         </div>
@@ -580,7 +515,7 @@
 
                     </div>
                 </div>
-                <div class="col-lg-6 d-flex justify-content-center flex-column">
+                <div id="About-Section" class="col-lg-6 d-flex justify-content-center flex-column">
                     <div class="inner mt_md--40 mt_sm--40">
                         <div class="section-title sal-animate" data-sal-delay="150" data-sal="slide-up"
                             data-sal-duration="800">
@@ -612,66 +547,6 @@
 
         <!-- Start Gradient with Text Marquee-->
         <section class="b-section">
-            <!-- <div id="bg-wrap">
-                    <defs>
-                        <radialGradient id="Gradient1" cx="50%" cy="50%" fx="0.441602%" fy="50%" r=".5">
-                            <animate attributeName="fx" dur="34s" values="0%;3%;0%" repeatCount="indefinite"></animate>
-                            <stop offset="0%" stop-color="rgba(255, 0, 255, 1)"></stop>
-                            <stop offset="100%" stop-color="rgba(255, 0, 255, 0)"></stop>
-                        </radialGradient>
-                        <radialGradient id="Gradient2" cx="50%" cy="50%" fx="2.68147%" fy="50%" r=".5">
-                            <animate attributeName="fx" dur="23.5s" values="0%;3%;0%" repeatCount="indefinite">
-                            </animate>
-                            <stop offset="0%" stop-color="rgba(255, 255, 0, 1)"></stop>
-                            <stop offset="100%" stop-color="rgba(255, 255, 0, 0)"></stop>
-                        </radialGradient>
-                        <radialGradient id="Gradient3" cx="50%" cy="50%" fx="0.836536%" fy="50%" r=".5">
-                            <animate attributeName="fx" dur="21.5s" values="0%;3%;0%" repeatCount="indefinite">
-                            </animate>
-                            <stop offset="0%" stop-color="rgba(0, 255, 255, 1)"></stop>
-                            <stop offset="100%" stop-color="rgba(0, 255, 255, 0)"></stop>
-                        </radialGradient>
-                        <radialGradient id="Gradient4" cx="50%" cy="50%" fx="4.56417%" fy="50%" r=".5">
-                            <animate attributeName="fx" dur="23s" values="0%;5%;0%" repeatCount="indefinite"></animate>
-                            <stop offset="0%" stop-color="rgba(0, 255, 0, 1)"></stop>
-                            <stop offset="100%" stop-color="rgba(0, 255, 0, 0)"></stop>
-                        </radialGradient>
-                        <radialGradient id="Gradient5" cx="50%" cy="50%" fx="2.65405%" fy="50%" r=".5">
-                            <animate attributeName="fx" dur="24.5s" values="0%;5%;0%" repeatCount="indefinite">
-                            </animate>
-                            <stop offset="0%" stop-color="rgba(0,0,255, 1)"></stop>
-                            <stop offset="100%" stop-color="rgba(0,0,255, 0)"></stop>
-                        </radialGradient>
-                        <radialGradient id="Gradient6" cx="50%" cy="50%" fx="0.981338%" fy="50%" r=".5">
-                            <animate attributeName="fx" dur="25.5s" values="0%;5%;0%" repeatCount="indefinite">
-                            </animate>
-                            <stop offset="0%" stop-color="rgba(255,0,0, 1)"></stop>
-                            <stop offset="100%" stop-color="rgba(255,0,0, 0)"></stop>
-                        </radialGradient>
-                    </defs>
-                    <rect x="13.744%" y="1.18473%" width="100%" height="100%" fill="url(#Gradient1)"
-                        transform="rotate(334.41 50 50)">
-                        <animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite"></animate>
-                        <animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite"></animate>
-                        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="7s"
-                            repeatCount="indefinite"></animateTransform>
-                    </rect>
-                    <rect x="-2.17916%" y="35.4267%" width="100%" height="100%" fill="url(#Gradient2)"
-                        transform="rotate(255.072 50 50)">
-                        <animate attributeName="x" dur="23s" values="-25%;0%;-25%" repeatCount="indefinite"></animate>
-                        <animate attributeName="y" dur="24s" values="0%;50%;0%" repeatCount="indefinite"></animate>
-                        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50"
-                            dur="12s" repeatCount="indefinite"></animateTransform>
-                    </rect>
-                    <rect x="9.00483%" y="14.5733%" width="100%" height="100%" fill="url(#Gradient3)"
-                        transform="rotate(139.903 50 50)">
-                        <animate attributeName="x" dur="25s" values="0%;25%;0%" repeatCount="indefinite"></animate>
-                        <animate attributeName="y" dur="12s" values="0%;25%;0%" repeatCount="indefinite"></animate>
-                        <animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="9s"
-                            repeatCount="indefinite"></animateTransform>
-                    </rect>
-                </svg>
-            </div> -->
             <div class="b-section-marquee-box glass">
                 <h2 class="marquee-text"> Our Portfolio •</h2>
                 <h2 class="marquee-text">Our Portfolio •</h2>
@@ -681,9 +556,46 @@
         <!-- End Gradient with Text Marquee-->
 
         <!-- Start Portfolio -->
-        <div class="eduvibe-animated-shape">
-            <div class="section-box bg-image">
-                <div class="container-box">
+        <div class="eduvibe-animated-shape swiper mySwiper">
+            <div class="section-box bg-image swiper-wrapper">
+                <div class="container-box swiper-slide d-flex">
+                    <div class="card">
+                        <div class="content">
+                            <div class="imgBx" id="imgBx">
+                                <img src="./assets/images/Creative-Website-Design-Template-PSD.jpg">
+                                <img src="./assets/images/Creative-Website-Design-Template-PSD.jpg">
+                                <img src="./assets/images/Creative-Website-Design-Template-PSD.jpg">
+                            </div>
+                            <div class="contentBx">
+                                <h3 class="text-black">Design<br><span>Design 1</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="content">
+                            <div class="imgBx" id="imgBx-2">
+                                <img
+                                    src="./assets/images/15 Extremely Helpful Apps You Should Have When Travelling.jpeg">
+                                <img src="./assets/images/Prev1_jpg by Vasjen Katro.jpeg">
+                                <img src="./assets/images/yejing1_png by Tian.jpeg">
+                            </div>
+                            <div class="contentBx">
+                                <h3>Design<br><span>Design 2</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="content">
+                            <div class="imgBx" id="imgBx-3">
+                                <img src="./assets/images/Creative-Website-Design-Template-PSD.jpg">
+                                <img src="./assets/images/Creative-Website-Design-Template-PSD.jpg">
+                                <img src="./assets/images/Creative-Website-Design-Template-PSD.jpg">
+                            </div>
+                            <div class="contentBx">
+                                <h3>Design<br><span>Design 3</span></h3>
+                            </div>
+                        </div>
+                    </div>
                     <div class="card">
                         <div class="content">
                             <div class="imgBx" id="imgBx">
@@ -723,6 +635,9 @@
                     </div>
                 </div>
             </div>
+            <!-- <div class="swiper-button-next text-black-50"></div>
+            <div class="swiper-button-prev text-black-50"></div>
+            <div class="swiper-pagination text-black-50"></div> -->
         </div>
         <!-- End Portfolio -->
 
@@ -742,26 +657,31 @@
                     <li>
                         <div class="inner-box glass p-4">
                             <h4 class="glass">Home</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident perferendis dolor sint enim laborum voluptate perspiciatis molestiae ipsa quidem at?</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident perferendis dolor
+                                    sint enim laborum voluptate perspiciatis molestiae ipsa quidem at?</p>
                         </div>
                     </li>
                     <li>
                         <div class="inner-box glass p-4">
                             <h4 class="glass">About</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident perferendis dolor sint enim laborum voluptate perspiciatis molestiae ipsa quidem at?</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident perferendis dolor
+                                    sint enim laborum voluptate perspiciatis molestiae ipsa quidem at?</p>
                         </div>
                     </li>
-                    <li> <div class="inner-box glass p-4">
-                        <h4 class="glass">TEST</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident perferendis dolor sint enim laborum voluptate perspiciatis molestiae ipsa quidem at?</p>
-                    </div>
-                </li>
                     <li>
-                         <div class="inner-box glass p-4">
-                        <h4 class="glass">Exit</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident perferendis dolor sint enim laborum voluptate perspiciatis molestiae ipsa quidem at?</p>
-                    </div>
-                </li>
+                        <div class="inner-box glass p-4">
+                            <h4 class="glass">TEST</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident perferendis dolor
+                                    sint enim laborum voluptate perspiciatis molestiae ipsa quidem at?</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="inner-box glass p-4">
+                            <h4 class="glass">Exit</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident perferendis dolor
+                                    sint enim laborum voluptate perspiciatis molestiae ipsa quidem at?</p>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -978,150 +898,190 @@
         <!-- End Testimonial Area  -->
 
         <!-- Start Test Footer-->
-
-
-
-        <!-- End Test Footer-->
-
-        <!-- Start Footer Area  -->
-        <footer class="eduvibe-footer-one edu-footer footer-style-default">
-            <div class="footer-top">
-                <div class="container eduvibe-animated-shape">
-                    <div class="row g-2">
-
-
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                            <div class="edu-footer-widget explore-widget">
-                                <h5 class="widget-title">Courses</h5>
-                                <div class="inner">
-                                    <ul class="footer-link link-hover">
-                                        <li><a href="about-us-1.html"><i class="icon-Double-arrow"></i>About Us</a></li>
-                                        <li><a href="event-list.html"><i class="icon-Double-arrow"></i>Upcoming
-                                                Events</a></li>
-                                        <li><a href="blog-standard.html"><i class="icon-Double-arrow"></i>Blog &
-                                                News</a></li>
-                                        <li><a href="faq.html"><i class="icon-Double-arrow"></i>FAQ Question</a></li>
-                                        <li><a href="testimonial.html"><i class="icon-Double-arrow"></i>Testimonial</a>
-                                        </li>
-                                        <li><a href="privacy-policy.html"><i class="icon-Double-arrow"></i>Privacy
-                                                Policy</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+        <footer id="footer" style="height: 100vh; display: flex; align-items: center; justify-content: center;">
+            <div class="container">
+                <div class="footer-background">
+                    <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 79 79">
+                        <path d="M63.5 28c0-12.5-10-23.5-23.5-23.5-21 0-36 15-36 35.5 0 20 16.5 35 36 35s35-16.5 35-35c0-6.5-3-12-11.5-12Zm0 0C63.5 40.5 52 51.5 40 51.5c-8 0-12.5-5.5-12.5-11.5S31 28 40 28h23.5Z" stroke="currentColor" stroke-width="8"></path>
+                      </svg>
+                </div>
+                <div class="footer-grid">
+                    <div class="footer-grid-item footer-grid-item-1 glass">
+                        <h2>Every moment matters.</h2>
+                        <img src="./assets/images/brand/brand-01.png" alt="">
+                        <p>© 2023 All Rights Reserved, Givingli Inc.</p>
+                    </div>
+                    <div class="footer-center">
+                    <div class="footer-grid-item footer-grid-item-2 glass">
+                        <h3>
+                            Support
+                        </h3>
+                        <p>
+                            Have questions? Get in touch or check out our Help Center.
+                        </p>
+                        <p>
+                            You can also text our support team at (310) 773-5384 or email us at help@givingli.com
+                        </p>
+                    </div>
+                    <div class="footer-grid-item footer-grid-item-3 glass">
+                        <a href="">Terms of use</a>
+                        <a href="">Privacy Policy</a>
+                    </div>
+                </div>
+                    <div class="footer-grid-item footer-grid-item-4 glass">
+                        <h3>Social</h3>
+                        <div class="footer-icons">
+                            <i class="ri-instagram-line"></i>
+                            <i class="ri-facebook-circle-fill"></i>
+                            <i class="ri-twitter-x-fill"></i>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                            <div class="edu-footer-widget explore-widget">
-                                <h5 class="widget-title">Freebies</h5>
-                                <div class="inner">
-                                    <ul class="footer-link link-hover">
-                                        <li><a href="about-us-1.html"><i class="icon-Double-arrow"></i>About Us</a></li>
-                                        <li><a href="event-list.html"><i class="icon-Double-arrow"></i>Upcoming
-                                                Events</a></li>
-                                        <li><a href="blog-standard.html"><i class="icon-Double-arrow"></i>Blog &
-                                                News</a></li>
-                                        <li><a href="faq.html"><i class="icon-Double-arrow"></i>FAQ Question</a></li>
-                                        <li><a href="testimonial.html"><i class="icon-Double-arrow"></i>Testimonial</a>
-                                        </li>
-                                        <li><a href="privacy-policy.html"><i class="icon-Double-arrow"></i>Privacy
-                                                Policy</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
 
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                            <div class="edu-footer-widget quick-link-widget">
-                                <h5 class="widget-title">Quick Links</h5>
-                                <div class="inner">
-                                    <ul class="footer-link link-hover">
-                                        <li><a href="contact-us.html"><i class="icon-Double-arrow"></i>Contact Us</a>
-                                        </li>
-                                        <li><a href="pricing.html"><i class="icon-Double-arrow"></i>Pricing Plan</a>
-                                        </li>
-                                        <li><a href="instructor-profile.html"><i
-                                                    class="icon-Double-arrow"></i>Instructor Profile</a></li>
-                                        <li><a href="faq.html"><i class="icon-Double-arrow"></i>FAQ</a></li>
-                                        <li><a href="course-style-3.html"><i class="icon-Double-arrow"></i>Popular
-                                                Courses</a></li>
-                                        <li><a href="purchase-guide.html"><i class="icon-Double-arrow"></i>Terms &
-                                                Conditions</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+    <!-- End Test Footer-->
 
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                            <div class="edu-footer-widget">
-                                <h5 class="widget-title">Join Now</h5>
+    <!-- Start Footer Area  -->
+    <!-- <footer class="eduvibe-footer-one edu-footer footer-style-default">
+        <div class="footer-top">
+            <div class="container eduvibe-animated-shape">
+                <div class="row g-2">
 
 
-                                <div class="inner">
-                                    <form style="width: 22rem;">
-                                        <!-- Name input -->
-                                        <div data-mdb-input-init class="form-outline mb-4">
-                                          <input type="text" id="form5Example1" class="form-control" />
-                                          <label class="form-label text-white" for="form5Example1">Name</label>
-                                        </div>
-                                      
-                                        <!-- Email input -->
-                                        <div data-mdb-input-init class="form-outline mb-4">
-                                          <input type="email" id="form5Example2" class="form-control" />
-                                          <label class="form-label text-white" for="form5Example2">Email address</label>
-                                        </div>
-                                      
-                                        <!-- Submit button -->
-                                        <button data-mdb-ripple-init type="button" class="btn btn-dark mb-4">Enroll Now</button>
-                                      </form>
-                                </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                        <div class="edu-footer-widget explore-widget">
+                            <h5 class="widget-title">Courses</h5>
+                            <div class="inner">
+                                <ul class="footer-link link-hover">
+                                    <li><a href="about-us-1.html"><i class="icon-Double-arrow"></i>About Us</a></li>
+                                    <li><a href="event-list.html"><i class="icon-Double-arrow"></i>Upcoming
+                                            Events</a></li>
+                                    <li><a href="blog-standard.html"><i class="icon-Double-arrow"></i>Blog &
+                                            News</a></li>
+                                    <li><a href="faq.html"><i class="icon-Double-arrow"></i>FAQ Question</a></li>
+                                    <li><a href="testimonial.html"><i class="icon-Double-arrow"></i>Testimonial</a>
+                                    </li>
+                                    <li><a href="privacy-policy.html"><i class="icon-Double-arrow"></i>Privacy
+                                            Policy</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="row g-2 mt--50">
-                        <div class="col-lg-12 col-md-6 col-sm-12 col-12 ">
-                            <div class="edu-footer-widget d-flex flex-column align-items-center justify-content-center">
-                                <div class="logo">
-                                    <a href="index.html">
-                                        <img class="logo-light" src="assets/images/logo/logo-white.png" alt="Site Logo">
-                                    </a>
-                                </div>
-                                <p class="description">It is a long established fact that a reader will be distracted by
-                                    the readable content of a page when looking at its layout. The point of using Lorem
-                                    Ipsum.</p>
-                                <ul class="social-share">
-                                    <li><a href="#"><i class="icon-Fb"></i></a></li>
-                                    <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="icon-Pinterest"></i></a></li>
-                                    <li><a href="#"><i class="icon-Twitter"></i></a></li>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                        <div class="edu-footer-widget explore-widget">
+                            <h5 class="widget-title">Freebies</h5>
+                            <div class="inner">
+                                <ul class="footer-link link-hover">
+                                    <li><a href="about-us-1.html"><i class="icon-Double-arrow"></i>About Us</a></li>
+                                    <li><a href="event-list.html"><i class="icon-Double-arrow"></i>Upcoming
+                                            Events</a></li>
+                                    <li><a href="blog-standard.html"><i class="icon-Double-arrow"></i>Blog &
+                                            News</a></li>
+                                    <li><a href="faq.html"><i class="icon-Double-arrow"></i>FAQ Question</a></li>
+                                    <li><a href="testimonial.html"><i class="icon-Double-arrow"></i>Testimonial</a>
+                                    </li>
+                                    <li><a href="privacy-policy.html"><i class="icon-Double-arrow"></i>Privacy
+                                            Policy</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
-                    <div class="shape-dot-wrapper shape-wrapper d-md-block d-none">
-                        <div class="shape-image shape-image-1">
-                            <img src="assets/images/shapes/shape-21-01.png" alt="Shape Thumb" />
-                        </div>
-                        <div class="shape-image shape-image-2">
-                            <img src="assets/images/shapes/shape-35.png" alt="Shape Thumb" />
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                        <div class="edu-footer-widget quick-link-widget">
+                            <h5 class="widget-title">Quick Links</h5>
+                            <div class="inner">
+                                <ul class="footer-link link-hover">
+                                    <li><a href="contact-us.html"><i class="icon-Double-arrow"></i>Contact Us</a>
+                                    </li>
+                                    <li><a href="pricing.html"><i class="icon-Double-arrow"></i>Pricing Plan</a>
+                                    </li>
+                                    <li><a href="instructor-profile.html"><i class="icon-Double-arrow"></i>Instructor
+                                            Profile</a></li>
+                                    <li><a href="faq.html"><i class="icon-Double-arrow"></i>FAQ</a></li>
+                                    <li><a href="course-style-3.html"><i class="icon-Double-arrow"></i>Popular
+                                            Courses</a></li>
+                                    <li><a href="purchase-guide.html"><i class="icon-Double-arrow"></i>Terms &
+                                            Conditions</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="copyright-area copyright-default">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="inner text-center">
-                                <p>Copyright 2023 <a href="#">EduVibe</a> Designed By <a
-                                        href="https://themeforest.net/user/devsvibe">DevsVibe</a>. All Rights Reserved
-                                </p>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                        <div class="edu-footer-widget">
+                            <h5 class="widget-title">Join Now</h5>
+
+
+                            <div class="inner">
+                                <form id="clearForm" style="width: 22rem;">
+
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <input type="text" id="name" class="form-control" />
+                                        <label class="form-label text-white" for="form5Example1">Name</label>
+                                    </div>
+
+
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <input type="email" id="email" class="form-control" />
+                                        <label class="form-label text-white" for="form5Example2">Email address</label>
+                                    </div>
+
+
+                                    <button data-mdb-ripple-init type="button" id="btnSubmit"
+                                        class="btn btn-dark mb-4">Enroll Now</button>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="row g-2 mt--50">
+                    <div class="col-lg-12 col-md-6 col-sm-12 col-12 ">
+                        <div class="edu-footer-widget d-flex flex-column align-items-center justify-content-center">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img class="logo-light" src="assets/images/logo/logo-white.png" alt="Site Logo">
+                                </a>
+                            </div>
+                            <p class="description">It is a long established fact that a reader will be distracted by
+                                the readable content of a page when looking at its layout. The point of using Lorem
+                                Ipsum.</p>
+                            <ul class="social-share">
+                                <li><a href="#"><i class="icon-Fb"></i></a></li>
+                                <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                                <li><a href="#"><i class="icon-Pinterest"></i></a></li>
+                                <li><a href="#"><i class="icon-Twitter"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shape-dot-wrapper shape-wrapper d-md-block d-none">
+                    <div class="shape-image shape-image-1">
+                        <img src="assets/images/shapes/shape-21-01.png" alt="Shape Thumb" />
+                    </div>
+                    <div class="shape-image shape-image-2">
+                        <img src="assets/images/shapes/shape-35.png" alt="Shape Thumb" />
+                    </div>
+                </div>
             </div>
-        </footer>
-        <!-- End Footer Area  -->
+        </div>
+        <div class="copyright-area copyright-default">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="inner text-center">
+                            <p>Copyright 2023 <a href="#">EduVibe</a> Designed By <a
+                                    href="https://themeforest.net/user/devsvibe">DevsVibe</a>. All Rights Reserved
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer> -->
+    <!-- End Footer Area  -->
     </div>
     <div class="rn-progress-parent">
         <svg class="rn-back-circle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102">
@@ -1135,128 +1095,7 @@
     <script src="assets/js/vendor/modernizr.min.js"></script>
     <!-- jQuery JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.min.js"></script>
-<script id="vertexShader" type="x-shader/x-vertex">
-    void main() {
-        gl_Position = vec4( position, 1.0 );
-    }
-</script>
-<script id="fragmentShader" type="x-shader/x-fragment">
-  uniform vec2 u_resolution;
-  uniform vec2 u_mouse;
-  uniform float u_time;
-  uniform sampler2D u_noise;
-  uniform sampler2D u_buffer;
-  uniform bool u_renderpass;
-    
-  const float blurMultiplier = 0.95;
-  const float circleSize = .25;
-  const float blurStrength = .98;
-  const float threshold = .5;
-  const float scale = 4.;
-  
-  #define _fract true
-  
-  #define PI 3.141592653589793
-  #define TAU 6.283185307179586
-
-  vec2 hash2(vec2 p)
-  {
-    vec2 o = texture2D( u_noise, (p+0.5)/256.0, -100.0 ).xy;
-    return o;
-  }
-  
-  vec3 hsb2rgb( in vec3 c ){
-    vec3 rgb = clamp(abs(mod(c.x*6.0+vec3(0.0,4.0,2.0),
-                             6.0)-3.0)-1.0,
-                     0.0,
-                     1.0 );
-    rgb = rgb*rgb*(3.0-2.0*rgb);
-    return c.z * mix( vec3(1.0), rgb, c.y);
-  }
-  
-  vec3 domain(vec2 z){
-    return vec3(hsb2rgb(vec3(atan(z.y,z.x)/TAU,1.,1.)));
-  }
-  vec3 colour(vec2 z) {
-      return domain(z);
-  }
-
-  
-#define pow2(x) (x * x)
-
-const int samples = 8;
-const float sigma = float(samples) * 0.25;
-
-float gaussian(vec2 i) {
-    return 1.0 / (2.0 * PI * pow2(sigma)) * exp(-((pow2(i.x) + pow2(i.y)) / (2.0 * pow2(sigma))));
-}
-
-vec3 hash33(vec3 p){ 
-    
-    float n = sin(dot(p, vec3(7, 157, 113)));    
-    return fract(vec3(2097152, 262144, 32768)*n); 
-}
-
-vec3 blur(sampler2D sp, vec2 uv, vec2 scale) {
-    vec3 col = vec3(0.0);
-    float accum = 0.0;
-    float weight;
-    vec2 offset;
-    
-    for (int x = -samples / 2; x < samples / 2; ++x) {
-        for (int y = -samples / 2; y < samples / 2; ++y) {
-            offset = vec2(x, y);
-            weight = gaussian(offset);
-            col += texture2D(sp, uv + scale * offset).rgb * weight;
-            accum += weight;
-        }
-    }
-    
-    return col / accum;
-}
-  void main() {
-    vec2 uv = (gl_FragCoord.xy - 0.5 * u_resolution.xy) / u_resolution.y;
-    uv *= scale;
-    vec2 mouse = u_mouse * scale;
-    
-    vec2 ps = vec2(1.0) / u_resolution.xy;
-    vec2 sample = gl_FragCoord.xy / u_resolution.xy;
-    vec2 o = mouse*.2+vec2(.65, .5);
-    float d = .98;
-    sample = d * (sample - o);
-    sample += o;
-    sample += vec2(sin((u_time+uv.y * .5)*10.)*.001, -.00);
-    
-    vec3 fragcolour;
-    vec4 tex;
-    if(u_renderpass) {
-      tex = vec4(blur(u_buffer, sample, ps*blurStrength) * blurMultiplier, 1.);
-      float df = length(mouse - uv);
-      fragcolour = vec3( smoothstep( circleSize, 0., df ) );
-    } else {
-      tex = texture2D(u_buffer, sample, 2.) * .98;
-      tex = vec4(
-        smoothstep(0.0, threshold - fwidth(tex.x), tex.x),
-        smoothstep(0.2, threshold - fwidth(tex.y) + .2, tex.y),
-        smoothstep(-0.05, threshold - fwidth(tex.z) - .2, tex.z),
-        1.);
-      vec3 n = hash33(vec3(uv, u_time*.1));
-      tex.rgb += n * .2 - .1;
-      // tex = vec4(
-      //   smoothstep(0.0, threshold - fwidth(tex.x), tex.x),
-      //   smoothstep(0.2, threshold - fwidth(tex.x) + .2, tex.x),
-      //   smoothstep(-0.05, threshold - fwidth(tex.x) - .2, tex.x),
-      //   1.);
-    }
-    // vec4 tex = texture2D(u_buffer, sample, 2.) * .98;
-    
-    
-
-    gl_FragColor = vec4(fragcolour,1.0);
-    gl_FragColor += tex;
-    
-  }
-</script>
+    </script>
     <script src="assets/js/vendor/jquery.js"></script>
     <script src="assets/js/vendor/bootstrap.min.js"></script>
     <script src="assets/js/vendor/sal.min.js"></script>
@@ -1274,14 +1113,12 @@ vec3 blur(sampler2D sp, vec2 uv, vec2 scale) {
     <script src="assets/js/vendor/paralax-scroll.js"></script>
     <script src="assets/js/vendor/jquery-ui.js"></script>
     <script src="assets/js/vendor/tilt.jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-    
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
 </body>
-
-
-<!-- Mirrored from eduvibe.html.devsvibe.com/index-one.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Nov 2023 08:07:50 GMT -->
 
 </html>
