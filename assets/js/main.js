@@ -1023,7 +1023,7 @@ let isHovering = false;
 const animation = gsap.to(".swiper-slide", {
   repeat: -1,
   x: "-100%",
-  duration: 15,
+  duration: 10,
   ease: "none",
   paused: isHovering
 });
