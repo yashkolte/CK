@@ -1,71 +1,71 @@
-let tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".edu-pricing-area",
-    start: "center center",
-    end: "=+1000px",
-    scrub: 1,
-  },
-});
+// let tl = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".edu-pricing-area",
+//     start: "center center",
+//     end: "=+1000px",
+//     scrub: 1,
+//   },
+// });
 
-tl.to(
-  ".project-shape",
-  {
-    duration: 3,
-    rotate: "-50deg",
-    ease: "power1",
-  },
-  "same"
-);
+// tl.to(
+//   ".project-shape",
+//   {
+//     duration: 3,
+//     rotate: "-50deg",
+//     ease: "power1",
+//   },
+//   "same"
+// );
 
-tl.to(
-  ".project-shape-top",
-  {
-    duration: 3,
-    rotate: "50deg",
-    ease: "power1",
-  },
-  "same"
-);
+// tl.to(
+//   ".project-shape-top",
+//   {
+//     duration: 3,
+//     rotate: "50deg",
+//     ease: "power1",
+//   },
+//   "same"
+// );
 
-tl.to(
-  ".project-shape-2",
-  {
-    duration: 3,
-    rotate: "30deg",
-    ease: "power1",
-  },
-  "same"
-);
+// tl.to(
+//   ".project-shape-2",
+//   {
+//     duration: 3,
+//     rotate: "30deg",
+//     ease: "power1",
+//   },
+//   "same"
+// );
 
-const rotationTimeline = gsap.timeline({
-  repeat: -1, // Repeat the animation indefinitely
-  repeatDelay: 4, // Delay between repetitions
-});
+// const rotationTimeline = gsap.timeline({
+//   repeat: -1, // Repeat the animation indefinitely
+//   repeatDelay: 4, // Delay between repetitions
+// });
 
-rotationTimeline.to(".animate-home .container", {
-  // Target the element with the class "element"
-  rotate: 90, // Rotate the element 50 degrees
-  duration: 4, // Set the duration of the rotation animation to 3 seconds
-  ease: "power2.inOut", // Use a smooth easing function
-});
-rotationTimeline.to(".animate-home .container", {
-  // Target the element with the class "element"
-  rotate: 180, // Rotate the element 50 degrees
-  duration: 4, // Set the duration of the rotation animation to 3 seconds
-  ease: "power2.inOut", // Use a smooth easing function
-});
-rotationTimeline.to(".animate-home .container", {
-  // Target the element with the class "element"
-  rotate: 270, // Rotate the element 50 degrees
-  duration: 4, // Set the duration of the rotation animation to 3 seconds
-  ease: "power2.inOut", // Use a smooth easing function
-});
-rotationTimeline.to(".animate-home .container", {
-  // Target the element with the class "element"
-  rotate: 360, // Rotate the element 50 degrees
-  duration: 4, // Set the duration of the rotation animation to 3 seconds
-  ease: "power2.inOut", // Use a smooth easing function
-});
+// rotationTimeline.to(".animate-home .container", {
+//   // Target the element with the class "element"
+//   rotate: 90, // Rotate the element 50 degrees
+//   duration: 4, // Set the duration of the rotation animation to 3 seconds
+//   ease: "power2.inOut", // Use a smooth easing function
+// });
+// rotationTimeline.to(".animate-home .container", {
+//   // Target the element with the class "element"
+//   rotate: 180, // Rotate the element 50 degrees
+//   duration: 4, // Set the duration of the rotation animation to 3 seconds
+//   ease: "power2.inOut", // Use a smooth easing function
+// });
+// rotationTimeline.to(".animate-home .container", {
+//   // Target the element with the class "element"
+//   rotate: 270, // Rotate the element 50 degrees
+//   duration: 4, // Set the duration of the rotation animation to 3 seconds
+//   ease: "power2.inOut", // Use a smooth easing function
+// });
+// rotationTimeline.to(".animate-home .container", {
+//   // Target the element with the class "element"
+//   rotate: 360, // Rotate the element 50 degrees
+//   duration: 4, // Set the duration of the rotation animation to 3 seconds
+//   ease: "power2.inOut", // Use a smooth easing function
+// });
 
 (function (window, document, $, undefined) {
   "use strict";
@@ -954,97 +954,64 @@ function disableOverlayForm() {
   });
 }
 
-const previousBtn = document.getElementById("previousBtn");
-const nextBtn = document.getElementById("nextBtn");
-const divRotate = document.querySelector(".animate-home .container");
+// const divRotate = document.querySelector(".animate-home .container");
 
-previousBtn.addEventListener("click", () => {
-  rotationTimeline.to(".animate-home .container", {
-    rotate: "-90deg",
-    duration: 4,
-    ease: "power2.inOut",
-  });
-});
+// const pose = document.querySelector("#pose");
 
-nextBtn.addEventListener("click", () => {
-  rotationTimeline.to(".animate-home .container", {
-    rotate: "90deg",
-    duration: 4,
-    ease: "power2.inOut",
-  });
-});
-
-const pose = document.querySelector("#pose");
-
-document.querySelector(".animate-home").addEventListener("mouseover", () => {
-  gsap.to("#pose", {
-    duration: 2,
-    y: -80,
-    ease: "power2.out",
-  });
-});
-
-document.querySelector(".animate-home").addEventListener("mouseleave", () => {
-  gsap.to("#pose", {
-    duration: 2,
-    y: 0,
-    ease: "power2.out",
-  });
-});
-
-document.querySelector(".sidenav-left img").addEventListener("click", () => {
-  gsap.to(".sidenav-left", {
-    duration: 2,
-    y: -1000,
-    ease: "bounce",
-  });
-  overlayForm.style.display = "flex";
-});
-
-// var swiper = new Swiper(".mySwiper", {
-//   spaceBetween: 30,
-//   centeredSlides: true,
-//   autoplay: {
-//     delay: 3000,
-//     disableOnInteraction: false,
-//   },
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
+// document.querySelector(".animate-home").addEventListener("mouseover", () => {
+//   gsap.to("#pose", {
+//     duration: 2,
+//     y: -80,
+//     ease: "power2.out",
+//   });
 // });
 
-let isHovering = false;
+// document.querySelector(".animate-home").addEventListener("mouseleave", () => {
+//   gsap.to("#pose", {
+//     duration: 2,
+//     y: 0,
+//     ease: "power2.out",
+//   });
+// });
 
-const animation = gsap.to(".swiper-slide", {
-  repeat: -1,
-  x: "-100%",
-  duration: 10,
-  ease: "none",
-  paused: isHovering
-});
+// document.querySelector(".sidenav-left img").addEventListener("click", () => {
+//   gsap.to(".sidenav-left", {
+//     duration: 2,
+//     y: -1500,
+//     ease: "bounce",
+//   });
+//   overlayForm.style.display = "flex";
+// });
 
-$(".swiper-slide").hover(
-  function () {
-    isHovering = true;
-    animation.pause();
-  },
-  function () {
-    isHovering = false;
-    animation.play();
-  }
-);
 
-gsap.to(".b-section-marquee-box h2", {
-  repeat: -1,
-  x: "-100%",
-  duration: 15,
-  ease: "none",
-})
+
+// let isHovering = false;
+
+// const animation = gsap.to(".swiper-slide", {
+//   repeat: -1,
+//   x: "-100%",
+//   duration: 35,
+//   ease: "none",
+//   paused: isHovering
+// });
+
+// $(".swiper-slide").hover(
+//   function () {
+//     isHovering = true;
+//     animation.pause();
+//   },
+//   function () {
+//     isHovering = false;
+//     animation.play();
+//   }
+// );
+
+// gsap.to(".b-section-marquee-box h2",{
+//   x: "-100%",
+//   repeat: -1,
+//   duration: 20,
+//   ease: "none",
+// });
 
 
 // ==================== Start Contact Form ============================
@@ -1129,12 +1096,193 @@ document.getElementById("PopupForm")
       .style.display = "flex";
   });
 
+  // ========================================================
+
+
+  
+
+  // ==============================================================================
+
+
+  gsap.defaults({
+    ease: "none", 
+  });
+  
+  var picker = document.querySelector(".picker");
+  var cells = document.querySelectorAll(".cell");
+  var proxy = document.createElement("div");
+  
+  var cellWidth = 450;
+  //var rotationX = 90;
+  
+  var numCells = cells.length;
+  var cellStep = 1 / numCells;
+  var wrapWidth = cellWidth * numCells;
+  console.log('props', {numCells,
+  cellStep,
+  wrapWidth})
+  var baseTl = gsap.timeline({ paused: true });
+  
+  gsap.set(picker, {
+    //perspective: 1100,
+    width: wrapWidth - cellWidth
+  });
+  
+  for (var i = 0; i < cells.length; i++) {  
+    initCell(cells[i], i);
+  }
+  
+  var animations = gsap.timeline({ repeat: -1, paused: true })
+    .add(baseTl.tweenFromTo(1, 2))
+  animations.progress(1, true).progress(0, true);
+  var draggable = new Draggable(proxy, {  
+    // allowContextMenu: true,  
+    type: "x",
+    trigger: picker,
+    inertia:true,
+    onDrag: updateProgress,
+    onThrowUpdate: updateProgress,
+    snap: { 
+      x: snapX
+    },
+    onThrowComplete: function(){
+      console.log("onThrowComplete");
+      //TODO: animation that inject selected card title
+    }
+  });
+  
+  function snapX(x) {  
+    
+    const snapped = Math.round(x / cellWidth) * cellWidth;
+    console.log('snapped', snapped, cellWidth )
+    return snapped
+  }
+  const wrap = gsap.utils.wrap(0, 1);
+  function updateProgress() {  
+    animations.progress(wrap(this.x / wrapWidth));
+  }
+  
+  function initCell(element, index) {
+    
+    gsap.set(element, {
+      width: cellWidth,
+      scale: 0.6,
+      //rotationX: rotationX,
+      x: -cellWidth
+    });
+    
+    var tl = gsap.timeline({ repeat: 1 })
+      .to(element, {duration:1, x: "+=" + wrapWidth/*, rotationX: -rotationX*/ }, 0)
+      .to(element, {duration:cellStep, scale: 1, repeat: 1, yoyo: true }, 0.5 - cellStep)
+    
+    baseTl.add(tl, i * -cellStep);
+  }
+
+  // ==================================================================
+
+  let album = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#main-album",
+      start: "top top",
+      end: "+=1500px",
+      scrub: 1,
+      // markers: true,
+      // ease: "power1.inOut",
+      pin: true,
+    },
+  });
+  
+  album.to(
+    "#main-album .album:nth-child(1) ",
+    {
+      duration: 3,
+      x: -320,
+      y: -50,
+      ease: "power1",
+    },
+    "album"
+  );
+  album.to(
+    "#main-album .album:nth-child(2) ",
+    {
+      duration: 3,
+      x:500,
+      y: 200,
+      ease: "power1",
+    },
+    "album"
+  );
+  album.to(
+    "#main-album .album:nth-child(3) ",
+    {
+      duration: 3,
+      x:-550,
+      y: 150,
+      ease: "power1",
+    },
+    "album"
+  );
+  album.to(
+    "#main-album .album:nth-child(4) ",
+    {
+      duration: 3,
+      x:550,
+      y: -150,
+      ease: "power1",
+    },
+    "album"
+  );
+  album.to(
+    "#main-album .album:nth-child(5) ",
+    {
+      duration: 3,
+      x:-560,
+      y: -180,
+      ease: "power1",
+    },
+    "album"
+  );
+  album.to(
+    "#main-album .album:nth-child(6) ",
+    {
+      duration: 3,
+      x:-50,
+      y: 260,
+      ease: "power1",
+    },
+    "album"
+  );
+  album.to(
+    "#main-album .album:nth-child(7) ",
+    {
+      duration: 3,
+      x: 180,
+      y: -180,
+      ease: "power1",
+    },
+    "album"
+  );
+  album.fromTo(
+    "#main-album .album:last-child ",{
+      scale: 0,
+      opacity: 0,
+    },
+    {
+      duration: 2,
+      scale: 1,
+      opacity: 1,
+      ease: "power1",
+    },
+    "album"
+  );
+
   var footer = gsap.timeline({
     scrollTrigger: {
       trigger: "#footer",
       start: "top center",
       end: "center center",
       scrub: 1,
+      // markers: true,
     }
   })
   
@@ -1144,4 +1292,39 @@ document.getElementById("PopupForm")
     duration: 5,
     ease: "linear",
   });
-  
+
+  // ==================================================================
+
+  console.clear();
+
+gsap.set('.infinite-text',{xPercent:-50,yPercent:-50})
+gsap.set('#no02',{y:50})
+
+var boxWidth = 600,
+    totalWidth = boxWidth * 7,  //  * n of boxes
+    no02 = document.querySelectorAll("#no02 .box"),
+    dirFromLeft = "+=" + totalWidth,
+    dirFromRight = "-=" + totalWidth;
+
+var mod = gsap.utils.wrap(0, totalWidth);
+
+function marquee(which, time, direction){
+  gsap.set(which, {
+    x:function(i) {
+      return i * boxWidth;
+    }
+  });
+  var action = gsap.timeline()
+  .to(which,  {
+  x: direction,
+  modifiers: {
+    x: x => mod(parseFloat(x)) + "px"
+  },
+    duration:time, ease:'none',
+    repeat:-1,
+  });
+  return action
+}
+
+var master = gsap.timeline()
+.add(marquee(no02, 20, dirFromRight),0)
