@@ -23232,7 +23232,6 @@ main {
   transform: translateX(-50%);
   height: 80px;
   width: 80px;
-  display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
