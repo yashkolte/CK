@@ -22989,7 +22989,6 @@ main {
 }
 
 #slider-icon {
-  display: none;
   position: absolute;
   bottom: 20px;
   left: 50%;
@@ -23002,6 +23001,7 @@ main {
   cursor: pointer;
   z-index: 10;
   opacity: .5;
+  display: none;
 }
 
 /* ======================================= */
