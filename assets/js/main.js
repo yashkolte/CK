@@ -16,24 +16,24 @@
 
     methods: function (e) {
       eduvibeJs.salActive();
-      eduvibeJs.magnigyPopup();
+      // eduvibeJs.magnigyPopup();
       eduvibeJs.slickSlider();
       eduvibeJs.headerSticky();
-      eduvibeJs.counterUp();
-      eduvibeJs.productHoverTilt();
-      eduvibeJs.masonryActivation();
-      eduvibeJs.lightboxActivation();
-      eduvibeJs.boxHover();
-      eduvibeJs.boxHoverSlider();
-      eduvibeJs.pricingPlan();
-      eduvibeJs.wowActivation();
-      eduvibeJs.qtyBtn();
-      eduvibeJs.accordionBtnTwo();
-      eduvibeJs.bannerAnimation();
-      eduvibeJs.popupMobileMenu();
-      eduvibeJs.bgMarque();
-      eduvibeJs.filterClickButton();
-      eduvibeJs.contactForm();
+      // eduvibeJs.counterUp();
+      // eduvibeJs.productHoverTilt();
+      // eduvibeJs.masonryActivation();
+      // eduvibeJs.lightboxActivation();
+      // eduvibeJs.boxHover();
+      // eduvibeJs.boxHoverSlider();
+      // eduvibeJs.pricingPlan();
+      // eduvibeJs.wowActivation();
+      // eduvibeJs.qtyBtn();
+      // eduvibeJs.accordionBtnTwo();
+      // eduvibeJs.bannerAnimation();
+      // eduvibeJs.popupMobileMenu();
+      // eduvibeJs.bgMarque();
+      // eduvibeJs.filterClickButton();
+      // eduvibeJs.contactForm();
     },
 
     bgMarque: function () {
@@ -55,13 +55,13 @@
       });
     },
 
-    magnigyPopup: function () {
-      $(document).on("ready", function () {
-        $(".video-popup-activation").magnificPopup({
-          type: "iframe",
-        });
-      });
-    },
+    // magnigyPopup: function () {
+    //   $(document).on("ready", function () {
+    //     $(".video-popup-activation").magnificPopup({
+    //       type: "iframe",
+    //     });
+    //   });
+    // },
 
     slickSlider: function () {
       $(".testimonial-item-1").slick({
@@ -465,349 +465,349 @@
       });
     },
 
-    counterUp: function () {
-      var odo = $(".odometer");
-      odo.each(function () {
-        $(".odometer").appear(function (e) {
-          var countNumber = $(this).attr("data-count");
-          $(this).html(countNumber);
-        });
-      });
-    },
+    // counterUp: function () {
+    //   var odo = $(".odometer");
+    //   odo.each(function () {
+    //     $(".odometer").appear(function (e) {
+    //       var countNumber = $(this).attr("data-count");
+    //       $(this).html(countNumber);
+    //     });
+    //   });
+    // },
 
-    productHoverTilt: function () {
-      if ($.isFunction($.fn.tilt)) {
-        $(".eduvibe-single-product-thumb-wrapper").tilt({
-          maxTilt: 30,
-          perspective: 1000,
-          easing: "cubic-bezier(.03,.98,.52,.99)",
-          speed: 500,
-          glare: false,
-          maxGlare: 0.3,
-          scale: 1.04,
-        });
-      }
-    },
+    // productHoverTilt: function () {
+    //   if ($.isFunction($.fn.tilt)) {
+    //     $(".eduvibe-single-product-thumb-wrapper").tilt({
+    //       maxTilt: 30,
+    //       perspective: 1000,
+    //       easing: "cubic-bezier(.03,.98,.52,.99)",
+    //       speed: 500,
+    //       glare: false,
+    //       maxGlare: 0.3,
+    //       scale: 1.04,
+    //     });
+    //   }
+    // },
 
-    masonryActivation: function name(params) {
-      $(window).load(function () {
-        $(".masonary-wrapper-activation").imagesLoaded(function () {
-          // filter items on button click
-          $(".isotop-filter").on("click", "button", function () {
-            var filterValue = $(this).attr("data-filter");
-            $(this).siblings(".is-checked").removeClass("is-checked");
-            $(this).addClass("is-checked");
-            $grid.isotope({
-              filter: filterValue,
-            });
-          });
+    // masonryActivation: function name(params) {
+    //   $(window).load(function () {
+    //     $(".masonary-wrapper-activation").imagesLoaded(function () {
+    //       // filter items on button click
+    //       $(".isotop-filter").on("click", "button", function () {
+    //         var filterValue = $(this).attr("data-filter");
+    //         $(this).siblings(".is-checked").removeClass("is-checked");
+    //         $(this).addClass("is-checked");
+    //         $grid.isotope({
+    //           filter: filterValue,
+    //         });
+    //       });
 
-          // init Isotope
-          var $grid = $(".mesonry-list").isotope({
-            percentPosition: true,
-            transitionDuration: "0.7s",
-            layoutMode: "masonry",
-            masonry: {
-              columnWidth: ".resizer",
-            },
-          });
-        });
-      });
-    },
+    //       // init Isotope
+    //       var $grid = $(".mesonry-list").isotope({
+    //         percentPosition: true,
+    //         transitionDuration: "0.7s",
+    //         layoutMode: "masonry",
+    //         masonry: {
+    //           columnWidth: ".resizer",
+    //         },
+    //       });
+    //     });
+    //   });
+    // },
 
-    lightboxActivation: function () {
-      lightGallery(document.getElementById("animated-thumbnials"), {
-        thumbnail: true,
-        animateThumb: false,
-        showThumbByDefault: false,
-      });
-    },
+  //   lightboxActivation: function () {
+  //     lightGallery(document.getElementById("animated-thumbnials"), {
+  //       thumbnail: true,
+  //       animateThumb: false,
+  //       showThumbByDefault: false,
+  //     });
+  //   },
 
-    boxHover: function () {
-      jQuery(".edu-instructor-3-visible, .eduvibe-hover-item-visible").on(
-        "mouseenter",
-        function () {
-          let selector = jQuery(this).parent().parent();
-          selector
-            .find(".edu-instructor-3-visible, .eduvibe-hover-item-visible")
-            .removeClass("eduvibe-hover-active");
-          jQuery(this).addClass("eduvibe-hover-active");
-        }
-      );
-    },
+  //   boxHover: function () {
+  //     jQuery(".edu-instructor-3-visible, .eduvibe-hover-item-visible").on(
+  //       "mouseenter",
+  //       function () {
+  //         let selector = jQuery(this).parent().parent();
+  //         selector
+  //           .find(".edu-instructor-3-visible, .eduvibe-hover-item-visible")
+  //           .removeClass("eduvibe-hover-active");
+  //         jQuery(this).addClass("eduvibe-hover-active");
+  //       }
+  //     );
+  //   },
 
-    boxHoverSlider: function () {
-      jQuery(".edu-instructor-3-slider-visible").on("mouseenter", function () {
-        let selector = jQuery(this).parent().parent().parent();
-        selector
-          .find(".edu-instructor-3-slider-visible")
-          .removeClass("eduvibe-hover-active");
-        jQuery(this).addClass("eduvibe-hover-active");
-      });
-    },
+  //   boxHoverSlider: function () {
+  //     jQuery(".edu-instructor-3-slider-visible").on("mouseenter", function () {
+  //       let selector = jQuery(this).parent().parent().parent();
+  //       selector
+  //         .find(".edu-instructor-3-slider-visible")
+  //         .removeClass("eduvibe-hover-active");
+  //       jQuery(this).addClass("eduvibe-hover-active");
+  //     });
+  //   },
 
-    pricingPlan: function () {
-      var yearlySelectBtn = $("#yearly-plan-btn"),
-        monthlySelectBtn = $("#monthly-plan-btn"),
-        monthlyPrice = $(".monthly-pricing"),
-        yearlyPrice = $(".yearly-pricing"),
-        buttonSlide = $("#pricing-checkbox");
+  //   pricingPlan: function () {
+  //     var yearlySelectBtn = $("#yearly-plan-btn"),
+  //       monthlySelectBtn = $("#monthly-plan-btn"),
+  //       monthlyPrice = $(".monthly-pricing"),
+  //       yearlyPrice = $(".yearly-pricing"),
+  //       buttonSlide = $("#pricing-checkbox");
 
-      $(monthlySelectBtn).on("click", function () {
-        buttonSlide.prop("checked", true);
-        $(this)
-          .addClass("active")
-          .parent(".nav-item")
-          .siblings()
-          .children()
-          .removeClass("active");
-        monthlyPrice.css("display", "block");
-        yearlyPrice.css("display", "none");
-      });
+  //     $(monthlySelectBtn).on("click", function () {
+  //       buttonSlide.prop("checked", true);
+  //       $(this)
+  //         .addClass("active")
+  //         .parent(".nav-item")
+  //         .siblings()
+  //         .children()
+  //         .removeClass("active");
+  //       monthlyPrice.css("display", "block");
+  //       yearlyPrice.css("display", "none");
+  //     });
 
-      $(yearlySelectBtn).on("click", function () {
-        buttonSlide.prop("checked", false);
-        $(this)
-          .addClass("active")
-          .parent(".nav-item")
-          .siblings()
-          .children()
-          .removeClass("active");
-        monthlyPrice.css("display", "none");
-        yearlyPrice.css("display", "block");
-      });
+  //     $(yearlySelectBtn).on("click", function () {
+  //       buttonSlide.prop("checked", false);
+  //       $(this)
+  //         .addClass("active")
+  //         .parent(".nav-item")
+  //         .siblings()
+  //         .children()
+  //         .removeClass("active");
+  //       monthlyPrice.css("display", "none");
+  //       yearlyPrice.css("display", "block");
+  //     });
 
-      $(buttonSlide).change(function () {
-        if ($('input[id="pricing-checkbox"]:checked').length > 0) {
-          monthlySelectBtn.addClass("active");
-          yearlySelectBtn.removeClass("active");
-          monthlyPrice.css("display", "block");
-          yearlyPrice.css("display", "none");
-        } else {
-          yearlySelectBtn.addClass("active");
-          monthlySelectBtn.removeClass("active");
-          monthlyPrice.css("display", "none");
-          yearlyPrice.css("display", "block");
-        }
-      });
-    },
+  //     $(buttonSlide).change(function () {
+  //       if ($('input[id="pricing-checkbox"]:checked').length > 0) {
+  //         monthlySelectBtn.addClass("active");
+  //         yearlySelectBtn.removeClass("active");
+  //         monthlyPrice.css("display", "block");
+  //         yearlyPrice.css("display", "none");
+  //       } else {
+  //         yearlySelectBtn.addClass("active");
+  //         monthlySelectBtn.removeClass("active");
+  //         monthlyPrice.css("display", "none");
+  //         yearlyPrice.css("display", "block");
+  //       }
+  //     });
+  //   },
 
-    wowActivation: function () {
-      new WOW().init();
-    },
+  //   wowActivation: function () {
+  //     new WOW().init();
+  //   },
 
-    qtyBtn: function () {
-      $(".pro-qty").prepend(
-        '<span class="dec qtybtn icon-arrow-down-s-fill"></span>'
-      );
-      $(".pro-qty").append(
-        '<span class="inc qtybtn icon-arrow-up-s-fill"></span>'
-      );
-      $(".qtybtn").on("click", function () {
-        var $button = $(this);
-        var oldValue = $button.parent().find("input").val();
-        if ($button.hasClass("inc")) {
-          var newVal = parseFloat(oldValue) + 1;
-        } else {
-          // Don't allow decrementing below zero
-          if (oldValue > 0) {
-            var newVal = parseFloat(oldValue) - 1;
-          } else {
-            newVal = 0;
-          }
-        }
-        $button.parent().find("input").val(newVal);
-      });
-    },
+  //   qtyBtn: function () {
+  //     $(".pro-qty").prepend(
+  //       '<span class="dec qtybtn icon-arrow-down-s-fill"></span>'
+  //     );
+  //     $(".pro-qty").append(
+  //       '<span class="inc qtybtn icon-arrow-up-s-fill"></span>'
+  //     );
+  //     $(".qtybtn").on("click", function () {
+  //       var $button = $(this);
+  //       var oldValue = $button.parent().find("input").val();
+  //       if ($button.hasClass("inc")) {
+  //         var newVal = parseFloat(oldValue) + 1;
+  //       } else {
+  //         // Don't allow decrementing below zero
+  //         if (oldValue > 0) {
+  //           var newVal = parseFloat(oldValue) - 1;
+  //         } else {
+  //           newVal = 0;
+  //         }
+  //       }
+  //       $button.parent().find("input").val(newVal);
+  //     });
+  //   },
 
-    accordionBtnOne: function () {
-      $('.edu-accordion-01 button[aria-expanded="true"]', function () {
-        $('.edu-accordion-01 button[aria-expanded="true"]')
-          .parent()
-          .parent()
-          .addClass("bg-active");
-      });
+  //   accordionBtnOne: function () {
+  //     $('.edu-accordion-01 button[aria-expanded="true"]', function () {
+  //       $('.edu-accordion-01 button[aria-expanded="true"]')
+  //         .parent()
+  //         .parent()
+  //         .addClass("bg-active");
+  //     });
 
-      $('.edu-accordion-01 button[aria-expanded="false"]', function () {
-        $('.edu-accordion-01 button[aria-expanded="false"]')
-          .parent()
-          .parent()
-          .removeClass("bg-active");
-      });
+  //     $('.edu-accordion-01 button[aria-expanded="false"]', function () {
+  //       $('.edu-accordion-01 button[aria-expanded="false"]')
+  //         .parent()
+  //         .parent()
+  //         .removeClass("bg-active");
+  //     });
 
-      $(".edu-accordion-01").on(
-        "click",
-        'button[aria-expanded="true"]',
-        function () {
-          $(this).parent().parent().addClass("bg-active");
-          $('.edu-accordion-01 button[aria-expanded="false"]')
-            .parent()
-            .parent()
-            .removeClass("bg-active");
-        }
-      );
+  //     $(".edu-accordion-01").on(
+  //       "click",
+  //       'button[aria-expanded="true"]',
+  //       function () {
+  //         $(this).parent().parent().addClass("bg-active");
+  //         $('.edu-accordion-01 button[aria-expanded="false"]')
+  //           .parent()
+  //           .parent()
+  //           .removeClass("bg-active");
+  //       }
+  //     );
 
-      $(".edu-accordion-01").on(
-        "click",
-        'button[aria-expanded="false"]',
-        function () {
-          $(this).parent().parent().removeClass("bg-active");
-          $('.edu-accordion-01 button[aria-expanded="true"]')
-            .parent()
-            .parent()
-            .addClass("bg-active");
-        }
-      );
-    },
+  //     $(".edu-accordion-01").on(
+  //       "click",
+  //       'button[aria-expanded="false"]',
+  //       function () {
+  //         $(this).parent().parent().removeClass("bg-active");
+  //         $('.edu-accordion-01 button[aria-expanded="true"]')
+  //           .parent()
+  //           .parent()
+  //           .addClass("bg-active");
+  //       }
+  //     );
+  //   },
 
-    accordionBtnTwo: function () {
-      $('.edu-accordion-02 button[aria-expanded="true"]', function () {
-        $('.edu-accordion-02 button[aria-expanded="true"]')
-          .parent()
-          .parent()
-          .addClass("bg-active");
-      });
+  //   accordionBtnTwo: function () {
+  //     $('.edu-accordion-02 button[aria-expanded="true"]', function () {
+  //       $('.edu-accordion-02 button[aria-expanded="true"]')
+  //         .parent()
+  //         .parent()
+  //         .addClass("bg-active");
+  //     });
 
-      $('.edu-accordion-02 button[aria-expanded="false"]', function () {
-        $('.edu-accordion-02 button[aria-expanded="false"]')
-          .parent()
-          .parent()
-          .removeClass("bg-active");
-      });
+  //     $('.edu-accordion-02 button[aria-expanded="false"]', function () {
+  //       $('.edu-accordion-02 button[aria-expanded="false"]')
+  //         .parent()
+  //         .parent()
+  //         .removeClass("bg-active");
+  //     });
 
-      $(".edu-accordion-02").on(
-        "click",
-        'button[aria-expanded="true"]',
-        function () {
-          $(this).parent().parent().addClass("bg-active");
-          $('.edu-accordion-02 button[aria-expanded="false"]')
-            .parent()
-            .parent()
-            .removeClass("bg-active");
-        }
-      );
+  //     $(".edu-accordion-02").on(
+  //       "click",
+  //       'button[aria-expanded="true"]',
+  //       function () {
+  //         $(this).parent().parent().addClass("bg-active");
+  //         $('.edu-accordion-02 button[aria-expanded="false"]')
+  //           .parent()
+  //           .parent()
+  //           .removeClass("bg-active");
+  //       }
+  //     );
 
-      $(".edu-accordion-02").on(
-        "click",
-        'button[aria-expanded="false"]',
-        function () {
-          $(this).parent().parent().removeClass("bg-active");
-          $('.edu-accordion-02 button[aria-expanded="true"]')
-            .parent()
-            .parent()
-            .addClass("bg-active");
-        }
-      );
-    },
+  //     $(".edu-accordion-02").on(
+  //       "click",
+  //       'button[aria-expanded="false"]',
+  //       function () {
+  //         $(this).parent().parent().removeClass("bg-active");
+  //         $('.edu-accordion-02 button[aria-expanded="true"]')
+  //           .parent()
+  //           .parent()
+  //           .addClass("bg-active");
+  //       }
+  //     );
+  //   },
 
-    bannerAnimation: function () {
-      $(".scene").each(function () {
-        new Parallax($(this)[0]);
-      });
-    },
+  //   bannerAnimation: function () {
+  //     $(".scene").each(function () {
+  //       new Parallax($(this)[0]);
+  //     });
+  //   },
 
-    popupMobileMenu: function (e) {
-      $(".hamberger-button").on("click", function (e) {
-        $(".popup-mobile-menu").addClass("active");
-      });
-      $(".close-menu").on("click", function (e) {
-        $(".popup-mobile-menu").removeClass("active");
-        $(".popup-mobile-menu .mainmenu .has-droupdown > a")
-          .siblings(".submenu, .rn-megamenu")
-          .removeClass("active")
-          .slideUp("400");
-        $(".popup-mobile-menu .mainmenu .has-droupdown > a").removeClass(
-          "open"
-        );
-      });
-      $(".popup-mobile-menu .mainmenu .has-droupdown > a").on(
-        "click",
-        function (e) {
-          e.preventDefault();
-          $(this)
-            .siblings(".submenu, .rn-megamenu")
-            .toggleClass("active")
-            .slideToggle("400");
-          $(this).toggleClass("open");
-        }
-      );
-      $(".popup-mobile-menu").on("click", function (e) {
-        e.target === this &&
-          $(".popup-mobile-menu").removeClass("active") &&
-          $(".popup-mobile-menu .mainmenu .has-droupdown > a")
-            .siblings(".submenu, .rn-megamenu")
-            .removeClass("active")
-            .slideUp("400") &&
-          $(".popup-mobile-menu .mainmenu .has-droupdown > a").removeClass(
-            "open"
-          );
-      });
-    },
+  //   popupMobileMenu: function (e) {
+  //     $(".hamberger-button").on("click", function (e) {
+  //       $(".popup-mobile-menu").addClass("active");
+  //     });
+  //     $(".close-menu").on("click", function (e) {
+  //       $(".popup-mobile-menu").removeClass("active");
+  //       $(".popup-mobile-menu .mainmenu .has-droupdown > a")
+  //         .siblings(".submenu, .rn-megamenu")
+  //         .removeClass("active")
+  //         .slideUp("400");
+  //       $(".popup-mobile-menu .mainmenu .has-droupdown > a").removeClass(
+  //         "open"
+  //       );
+  //     });
+  //     $(".popup-mobile-menu .mainmenu .has-droupdown > a").on(
+  //       "click",
+  //       function (e) {
+  //         e.preventDefault();
+  //         $(this)
+  //           .siblings(".submenu, .rn-megamenu")
+  //           .toggleClass("active")
+  //           .slideToggle("400");
+  //         $(this).toggleClass("open");
+  //       }
+  //     );
+  //     $(".popup-mobile-menu").on("click", function (e) {
+  //       e.target === this &&
+  //         $(".popup-mobile-menu").removeClass("active") &&
+  //         $(".popup-mobile-menu .mainmenu .has-droupdown > a")
+  //           .siblings(".submenu, .rn-megamenu")
+  //           .removeClass("active")
+  //           .slideUp("400") &&
+  //         $(".popup-mobile-menu .mainmenu .has-droupdown > a").removeClass(
+  //           "open"
+  //         );
+  //     });
+  //   },
 
 
-    filterClickButton: function () {
-      $("#slider-range").slider({
-        range: true,
-        min: 10,
-        max: 500,
-        values: [100, 300],
-        slide: function (event, ui) {
-          $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
-        },
-      });
-      $("#amount").val(
-        "$" +
-          $("#slider-range").slider("values", 0) +
-          " - $" +
-          $("#slider-range").slider("values", 1)
-      );
-    },
+  //   filterClickButton: function () {
+  //     $("#slider-range").slider({
+  //       range: true,
+  //       min: 10,
+  //       max: 500,
+  //       values: [100, 300],
+  //       slide: function (event, ui) {
+  //         $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+  //       },
+  //     });
+  //     $("#amount").val(
+  //       "$" +
+  //         $("#slider-range").slider("values", 0) +
+  //         " - $" +
+  //         $("#slider-range").slider("values", 1)
+  //     );
+  //   },
 
-    contactForm: function () {
-      $(".rwt-dynamic-form").on("submit", function (e) {
-        e.preventDefault();
-        var _self = $(this);
-        var __selector = _self.closest("input,textarea");
-        _self.closest("div").find("input,textarea").removeAttr("style");
-        _self.find(".error-msg").remove();
-        _self
-          .closest("div")
-          .find('button[type="submit"]')
-          .attr("disabled", "disabled");
-        var data = $(this).serialize();
-        $.ajax({
-          url: "mail.php",
-          type: "post",
-          dataType: "json",
-          data: data,
-          success: function (data) {
-            _self
-              .closest("div")
-              .find('button[type="submit"]')
-              .removeAttr("disabled");
-            if (data.code == false) {
-              _self.closest("div").find('[name="' + data.field + '"]');
-              _self
-                .find(".rn-btn")
-                .after('<div class="error-msg"><p>*' + data.err + "</p></div>");
-            } else {
-              $(".error-msg").hide();
-              $(".form-group").removeClass("focused");
-              _self
-                .find(".rn-btn")
-                .after(
-                  '<div class="success-msg"><p>' + data.success + "</p></div>"
-                );
-              _self.closest("div").find("input,textarea").val("");
+  //   contactForm: function () {
+  //     $(".rwt-dynamic-form").on("submit", function (e) {
+  //       e.preventDefault();
+  //       var _self = $(this);
+  //       var __selector = _self.closest("input,textarea");
+  //       _self.closest("div").find("input,textarea").removeAttr("style");
+  //       _self.find(".error-msg").remove();
+  //       _self
+  //         .closest("div")
+  //         .find('button[type="submit"]')
+  //         .attr("disabled", "disabled");
+  //       var data = $(this).serialize();
+  //       $.ajax({
+  //         url: "mail.php",
+  //         type: "post",
+  //         dataType: "json",
+  //         data: data,
+  //         success: function (data) {
+  //           _self
+  //             .closest("div")
+  //             .find('button[type="submit"]')
+  //             .removeAttr("disabled");
+  //           if (data.code == false) {
+  //             _self.closest("div").find('[name="' + data.field + '"]');
+  //             _self
+  //               .find(".rn-btn")
+  //               .after('<div class="error-msg"><p>*' + data.err + "</p></div>");
+  //           } else {
+  //             $(".error-msg").hide();
+  //             $(".form-group").removeClass("focused");
+  //             _self
+  //               .find(".rn-btn")
+  //               .after(
+  //                 '<div class="success-msg"><p>' + data.success + "</p></div>"
+  //               );
+  //             _self.closest("div").find("input,textarea").val("");
 
-              setTimeout(function () {
-                $(".success-msg").fadeOut("slow");
-              }, 5000);
-            }
-          },
-        });
-      });
-    },
+  //             setTimeout(function () {
+  //               $(".success-msg").fadeOut("slow");
+  //             }, 5000);
+  //           }
+  //         },
+  //       });
+  //     });
+  //   },
   };
 
   eduvibeJs.i();
@@ -978,7 +978,7 @@ document.getElementById("PopupForm")
       .style.display = "flex";
   });
 
-  // ========================================================
+  // ================================================================
 
 
   
