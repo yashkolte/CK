@@ -23100,6 +23100,10 @@ footer p {
     /* font-size: 30px !important; */
   }
 
+  #slider-icon {
+    display: flex;
+  }
+
   .eduvibe-animated-shape { 
     margin-top: 2rem;
   }
@@ -23203,6 +23207,14 @@ main {
   /* background: #ffffff69; */
 }
 
+#project-slider {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  /* background: #fff; */
+
+}
 
 
 .picker {
@@ -23210,6 +23222,23 @@ main {
   overflow: hidden;  
   width: 80vw;
   height: 90vh;
+}
+
+#slider-icon {
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 80px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  opacity: .5;
 }
 
 /* ======================================= */
@@ -23294,3 +23323,4 @@ white-space: nowrap;
 color: transparent;
 font-weight: 600;
 }
+

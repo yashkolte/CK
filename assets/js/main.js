@@ -1058,6 +1058,14 @@ document.getElementById("PopupForm")
     baseTl.add(tl, i * -cellStep);
   }
 
+  gsap.to("#slider-icon", {
+    x: 25,
+    duration: 1,
+    ease: "power1.inOut",
+    repeat: -1,
+    yoyo: true,
+  })
+
   // ==================================================================
 
   let album = gsap.timeline({
