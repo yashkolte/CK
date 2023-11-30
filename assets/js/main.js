@@ -886,64 +886,14 @@ function disableOverlayForm() {
   });
 }
 
-// const divRotate = document.querySelector(".animate-home .container");
-
-// const pose = document.querySelector("#pose");
-
-// document.querySelector(".animate-home").addEventListener("mouseover", () => {
-//   gsap.to("#pose", {
-//     duration: 2,
-//     y: -80,
-//     ease: "power2.out",
-//   });
-// });
-
-// document.querySelector(".animate-home").addEventListener("mouseleave", () => {
-//   gsap.to("#pose", {
-//     duration: 2,
-//     y: 0,
-//     ease: "power2.out",
-//   });
-// });
-
-// document.querySelector(".sidenav-left img").addEventListener("click", () => {
-//   gsap.to(".sidenav-left", {
-//     duration: 2,
-//     y: -1500,
-//     ease: "bounce",
-//   });
-//   overlayForm.style.display = "flex";
-// });
-
-
-
-// let isHovering = false;
-
-// const animation = gsap.to(".swiper-slide", {
-//   repeat: -1,
-//   x: "-100%",
-//   duration: 35,
-//   ease: "none",
-//   paused: isHovering
-// });
-
-// $(".swiper-slide").hover(
-//   function () {
-//     isHovering = true;
-//     animation.pause();
-//   },
-//   function () {
-//     isHovering = false;
-//     animation.play();
-//   }
-// );
-
-// gsap.to(".b-section-marquee-box h2",{
-//   x: "-100%",
-//   repeat: -1,
-//   duration: 20,
-//   ease: "none",
-// });
+document.querySelector(".sidenav-left img").addEventListener("click", () => {
+  gsap.to(".sidenav-left", {
+    duration: 2,
+    y: -1500,
+    ease: "bounce",
+  });
+  overlayForm.style.display = "flex";
+});
 
 
 // ==================== Start Contact Form ============================
@@ -1068,10 +1018,8 @@ document.getElementById("PopupForm")
     .add(baseTl.tweenFromTo(1, 2))
   animations.progress(1, true).progress(0, true);
   var draggable = new Draggable(proxy, {  
-    // allowContextMenu: true,  
     type: "x",
     trigger: picker,
-    inertia:true,
     onDrag: updateProgress,
     onThrowUpdate: updateProgress,
     snap: { 
