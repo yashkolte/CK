@@ -13150,7 +13150,7 @@ button.edu-btn.btn-border {
   /* background: var(--color-white); */
   border-radius: 5px;
   padding: 30px;
-  margin-bottom: 40px;
+  margin: 20px;
 }
 .testimonial-card-box .inner::after {
   position: absolute;
@@ -23084,6 +23084,21 @@ footer p {
 }
 
 @media screen and (max-width: 767px){
+
+  .running-text {
+    margin-top: 0rem !important;
+    margin-bottom: 3rem !important;
+  }
+
+  .infinite-text {
+    height: 100px !important;
+  }
+
+  .infinite-text .box {
+    width: 100px !important;
+    height: 50px !important;
+    /* font-size: 30px !important; */
+  }
 
   .eduvibe-animated-shape { 
     margin-top: 2rem;
