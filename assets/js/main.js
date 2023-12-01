@@ -1072,11 +1072,9 @@ document.getElementById("PopupForm")
     scrollTrigger: {
       trigger: "#main-album",
       start: "top top",
-      end: "+=1500px",
       scrub: 1,
-      // markers: true,
-      // ease: "power1.inOut",
       pin: true,
+      end: "+=1500px",
     },
   });
   
@@ -1181,6 +1179,9 @@ document.getElementById("PopupForm")
     ease: "linear",
   });
 
+  // ======================================================================
+
+
   // ==================================================================
 
   console.clear();
@@ -1215,4 +1216,44 @@ function marquee(which, time, direction){
 }
 
 var master = gsap.timeline()
-.add(marquee(no02, 20, dirFromRight),0)
+.add(marquee(no02, 50, dirFromRight),0)
+
+// ======================================================================
+
+console.clear();
+
+
+gsap.set('#main-project-slider',{xPercent:-50,yPercent:-50})
+gsap.set('#projects',{y:50})
+
+var ProjectboxWidth = 300,
+    ProjecttotalWidth = boxWidth * 4,  //  * n of boxes
+    Projectno02 = document.querySelectorAll("#projects .project"),
+    ProjectdirFromLeft = "+=" + ProjecttotalWidth,
+    ProjectdirFromRight = "-=" + ProjecttotalWidth;
+
+var mod = gsap.utils.wrap(0, ProjecttotalWidth);
+
+function marquee(which, time, direction){
+  gsap.set(which, {
+    x:function(i) {
+      return i * boxWidth;
+    }
+  });
+  var action = gsap.timeline()
+  .to(which,  {
+  x: direction,
+  modifiers: {
+    x: x => mod(parseFloat(x)) + "px"
+  },
+    duration:time, ease:'none',
+    repeat:-1,
+  });
+  return action
+}
+
+var master = gsap.timeline()
+.add(marquee(Projectno02, 40, ProjectdirFromRight),0)
+
+
+
