@@ -1189,7 +1189,7 @@ document.getElementById("PopupForm")
 gsap.set('.infinite-text',{xPercent:-50,yPercent:-50})
 gsap.set('#no02',{y:50})
 
-var boxWidth = 600,
+var boxWidth = 700,
     totalWidth = boxWidth * 7,  //  * n of boxes
     no02 = document.querySelectorAll("#no02 .box"),
     dirFromLeft = "+=" + totalWidth,
