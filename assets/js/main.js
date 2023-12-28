@@ -16,24 +16,8 @@
 
     methods: function (e) {
       eduvibeJs.salActive();
-      // eduvibeJs.magnigyPopup();
       eduvibeJs.slickSlider();
       eduvibeJs.headerSticky();
-      // eduvibeJs.counterUp();
-      // eduvibeJs.productHoverTilt();
-      // eduvibeJs.masonryActivation();
-      // eduvibeJs.lightboxActivation();
-      // eduvibeJs.boxHover();
-      // eduvibeJs.boxHoverSlider();
-      // eduvibeJs.pricingPlan();
-      // eduvibeJs.wowActivation();
-      // eduvibeJs.qtyBtn();
-      // eduvibeJs.accordionBtnTwo();
-      // eduvibeJs.bannerAnimation();
-      // eduvibeJs.popupMobileMenu();
-      // eduvibeJs.bgMarque();
-      // eduvibeJs.filterClickButton();
-      // eduvibeJs.contactForm();
     },
 
     bgMarque: function () {
@@ -464,350 +448,6 @@
         }
       });
     },
-
-    // counterUp: function () {
-    //   var odo = $(".odometer");
-    //   odo.each(function () {
-    //     $(".odometer").appear(function (e) {
-    //       var countNumber = $(this).attr("data-count");
-    //       $(this).html(countNumber);
-    //     });
-    //   });
-    // },
-
-    // productHoverTilt: function () {
-    //   if ($.isFunction($.fn.tilt)) {
-    //     $(".eduvibe-single-product-thumb-wrapper").tilt({
-    //       maxTilt: 30,
-    //       perspective: 1000,
-    //       easing: "cubic-bezier(.03,.98,.52,.99)",
-    //       speed: 500,
-    //       glare: false,
-    //       maxGlare: 0.3,
-    //       scale: 1.04,
-    //     });
-    //   }
-    // },
-
-    // masonryActivation: function name(params) {
-    //   $(window).load(function () {
-    //     $(".masonary-wrapper-activation").imagesLoaded(function () {
-    //       // filter items on button click
-    //       $(".isotop-filter").on("click", "button", function () {
-    //         var filterValue = $(this).attr("data-filter");
-    //         $(this).siblings(".is-checked").removeClass("is-checked");
-    //         $(this).addClass("is-checked");
-    //         $grid.isotope({
-    //           filter: filterValue,
-    //         });
-    //       });
-
-    //       // init Isotope
-    //       var $grid = $(".mesonry-list").isotope({
-    //         percentPosition: true,
-    //         transitionDuration: "0.7s",
-    //         layoutMode: "masonry",
-    //         masonry: {
-    //           columnWidth: ".resizer",
-    //         },
-    //       });
-    //     });
-    //   });
-    // },
-
-  //   lightboxActivation: function () {
-  //     lightGallery(document.getElementById("animated-thumbnials"), {
-  //       thumbnail: true,
-  //       animateThumb: false,
-  //       showThumbByDefault: false,
-  //     });
-  //   },
-
-  //   boxHover: function () {
-  //     jQuery(".edu-instructor-3-visible, .eduvibe-hover-item-visible").on(
-  //       "mouseenter",
-  //       function () {
-  //         let selector = jQuery(this).parent().parent();
-  //         selector
-  //           .find(".edu-instructor-3-visible, .eduvibe-hover-item-visible")
-  //           .removeClass("eduvibe-hover-active");
-  //         jQuery(this).addClass("eduvibe-hover-active");
-  //       }
-  //     );
-  //   },
-
-  //   boxHoverSlider: function () {
-  //     jQuery(".edu-instructor-3-slider-visible").on("mouseenter", function () {
-  //       let selector = jQuery(this).parent().parent().parent();
-  //       selector
-  //         .find(".edu-instructor-3-slider-visible")
-  //         .removeClass("eduvibe-hover-active");
-  //       jQuery(this).addClass("eduvibe-hover-active");
-  //     });
-  //   },
-
-  //   pricingPlan: function () {
-  //     var yearlySelectBtn = $("#yearly-plan-btn"),
-  //       monthlySelectBtn = $("#monthly-plan-btn"),
-  //       monthlyPrice = $(".monthly-pricing"),
-  //       yearlyPrice = $(".yearly-pricing"),
-  //       buttonSlide = $("#pricing-checkbox");
-
-  //     $(monthlySelectBtn).on("click", function () {
-  //       buttonSlide.prop("checked", true);
-  //       $(this)
-  //         .addClass("active")
-  //         .parent(".nav-item")
-  //         .siblings()
-  //         .children()
-  //         .removeClass("active");
-  //       monthlyPrice.css("display", "block");
-  //       yearlyPrice.css("display", "none");
-  //     });
-
-  //     $(yearlySelectBtn).on("click", function () {
-  //       buttonSlide.prop("checked", false);
-  //       $(this)
-  //         .addClass("active")
-  //         .parent(".nav-item")
-  //         .siblings()
-  //         .children()
-  //         .removeClass("active");
-  //       monthlyPrice.css("display", "none");
-  //       yearlyPrice.css("display", "block");
-  //     });
-
-  //     $(buttonSlide).change(function () {
-  //       if ($('input[id="pricing-checkbox"]:checked').length > 0) {
-  //         monthlySelectBtn.addClass("active");
-  //         yearlySelectBtn.removeClass("active");
-  //         monthlyPrice.css("display", "block");
-  //         yearlyPrice.css("display", "none");
-  //       } else {
-  //         yearlySelectBtn.addClass("active");
-  //         monthlySelectBtn.removeClass("active");
-  //         monthlyPrice.css("display", "none");
-  //         yearlyPrice.css("display", "block");
-  //       }
-  //     });
-  //   },
-
-  //   wowActivation: function () {
-  //     new WOW().init();
-  //   },
-
-  //   qtyBtn: function () {
-  //     $(".pro-qty").prepend(
-  //       '<span class="dec qtybtn icon-arrow-down-s-fill"></span>'
-  //     );
-  //     $(".pro-qty").append(
-  //       '<span class="inc qtybtn icon-arrow-up-s-fill"></span>'
-  //     );
-  //     $(".qtybtn").on("click", function () {
-  //       var $button = $(this);
-  //       var oldValue = $button.parent().find("input").val();
-  //       if ($button.hasClass("inc")) {
-  //         var newVal = parseFloat(oldValue) + 1;
-  //       } else {
-  //         // Don't allow decrementing below zero
-  //         if (oldValue > 0) {
-  //           var newVal = parseFloat(oldValue) - 1;
-  //         } else {
-  //           newVal = 0;
-  //         }
-  //       }
-  //       $button.parent().find("input").val(newVal);
-  //     });
-  //   },
-
-  //   accordionBtnOne: function () {
-  //     $('.edu-accordion-01 button[aria-expanded="true"]', function () {
-  //       $('.edu-accordion-01 button[aria-expanded="true"]')
-  //         .parent()
-  //         .parent()
-  //         .addClass("bg-active");
-  //     });
-
-  //     $('.edu-accordion-01 button[aria-expanded="false"]', function () {
-  //       $('.edu-accordion-01 button[aria-expanded="false"]')
-  //         .parent()
-  //         .parent()
-  //         .removeClass("bg-active");
-  //     });
-
-  //     $(".edu-accordion-01").on(
-  //       "click",
-  //       'button[aria-expanded="true"]',
-  //       function () {
-  //         $(this).parent().parent().addClass("bg-active");
-  //         $('.edu-accordion-01 button[aria-expanded="false"]')
-  //           .parent()
-  //           .parent()
-  //           .removeClass("bg-active");
-  //       }
-  //     );
-
-  //     $(".edu-accordion-01").on(
-  //       "click",
-  //       'button[aria-expanded="false"]',
-  //       function () {
-  //         $(this).parent().parent().removeClass("bg-active");
-  //         $('.edu-accordion-01 button[aria-expanded="true"]')
-  //           .parent()
-  //           .parent()
-  //           .addClass("bg-active");
-  //       }
-  //     );
-  //   },
-
-  //   accordionBtnTwo: function () {
-  //     $('.edu-accordion-02 button[aria-expanded="true"]', function () {
-  //       $('.edu-accordion-02 button[aria-expanded="true"]')
-  //         .parent()
-  //         .parent()
-  //         .addClass("bg-active");
-  //     });
-
-  //     $('.edu-accordion-02 button[aria-expanded="false"]', function () {
-  //       $('.edu-accordion-02 button[aria-expanded="false"]')
-  //         .parent()
-  //         .parent()
-  //         .removeClass("bg-active");
-  //     });
-
-  //     $(".edu-accordion-02").on(
-  //       "click",
-  //       'button[aria-expanded="true"]',
-  //       function () {
-  //         $(this).parent().parent().addClass("bg-active");
-  //         $('.edu-accordion-02 button[aria-expanded="false"]')
-  //           .parent()
-  //           .parent()
-  //           .removeClass("bg-active");
-  //       }
-  //     );
-
-  //     $(".edu-accordion-02").on(
-  //       "click",
-  //       'button[aria-expanded="false"]',
-  //       function () {
-  //         $(this).parent().parent().removeClass("bg-active");
-  //         $('.edu-accordion-02 button[aria-expanded="true"]')
-  //           .parent()
-  //           .parent()
-  //           .addClass("bg-active");
-  //       }
-  //     );
-  //   },
-
-  //   bannerAnimation: function () {
-  //     $(".scene").each(function () {
-  //       new Parallax($(this)[0]);
-  //     });
-  //   },
-
-  //   popupMobileMenu: function (e) {
-  //     $(".hamberger-button").on("click", function (e) {
-  //       $(".popup-mobile-menu").addClass("active");
-  //     });
-  //     $(".close-menu").on("click", function (e) {
-  //       $(".popup-mobile-menu").removeClass("active");
-  //       $(".popup-mobile-menu .mainmenu .has-droupdown > a")
-  //         .siblings(".submenu, .rn-megamenu")
-  //         .removeClass("active")
-  //         .slideUp("400");
-  //       $(".popup-mobile-menu .mainmenu .has-droupdown > a").removeClass(
-  //         "open"
-  //       );
-  //     });
-  //     $(".popup-mobile-menu .mainmenu .has-droupdown > a").on(
-  //       "click",
-  //       function (e) {
-  //         e.preventDefault();
-  //         $(this)
-  //           .siblings(".submenu, .rn-megamenu")
-  //           .toggleClass("active")
-  //           .slideToggle("400");
-  //         $(this).toggleClass("open");
-  //       }
-  //     );
-  //     $(".popup-mobile-menu").on("click", function (e) {
-  //       e.target === this &&
-  //         $(".popup-mobile-menu").removeClass("active") &&
-  //         $(".popup-mobile-menu .mainmenu .has-droupdown > a")
-  //           .siblings(".submenu, .rn-megamenu")
-  //           .removeClass("active")
-  //           .slideUp("400") &&
-  //         $(".popup-mobile-menu .mainmenu .has-droupdown > a").removeClass(
-  //           "open"
-  //         );
-  //     });
-  //   },
-
-
-  //   filterClickButton: function () {
-  //     $("#slider-range").slider({
-  //       range: true,
-  //       min: 10,
-  //       max: 500,
-  //       values: [100, 300],
-  //       slide: function (event, ui) {
-  //         $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
-  //       },
-  //     });
-  //     $("#amount").val(
-  //       "$" +
-  //         $("#slider-range").slider("values", 0) +
-  //         " - $" +
-  //         $("#slider-range").slider("values", 1)
-  //     );
-  //   },
-
-  //   contactForm: function () {
-  //     $(".rwt-dynamic-form").on("submit", function (e) {
-  //       e.preventDefault();
-  //       var _self = $(this);
-  //       var __selector = _self.closest("input,textarea");
-  //       _self.closest("div").find("input,textarea").removeAttr("style");
-  //       _self.find(".error-msg").remove();
-  //       _self
-  //         .closest("div")
-  //         .find('button[type="submit"]')
-  //         .attr("disabled", "disabled");
-  //       var data = $(this).serialize();
-  //       $.ajax({
-  //         url: "mail.php",
-  //         type: "post",
-  //         dataType: "json",
-  //         data: data,
-  //         success: function (data) {
-  //           _self
-  //             .closest("div")
-  //             .find('button[type="submit"]')
-  //             .removeAttr("disabled");
-  //           if (data.code == false) {
-  //             _self.closest("div").find('[name="' + data.field + '"]');
-  //             _self
-  //               .find(".rn-btn")
-  //               .after('<div class="error-msg"><p>*' + data.err + "</p></div>");
-  //           } else {
-  //             $(".error-msg").hide();
-  //             $(".form-group").removeClass("focused");
-  //             _self
-  //               .find(".rn-btn")
-  //               .after(
-  //                 '<div class="success-msg"><p>' + data.success + "</p></div>"
-  //               );
-  //             _self.closest("div").find("input,textarea").val("");
-
-  //             setTimeout(function () {
-  //               $(".success-msg").fadeOut("slow");
-  //             }, 5000);
-  //           }
-  //         },
-  //       });
-  //     });
-  //   },
   };
 
   eduvibeJs.i();
@@ -869,11 +509,16 @@ function disableWPBox() {
 }
 
 const announcement = document.getElementById("announcement");
+const mainBtn = document.getElementById("main-btn");
+const aboutBtn = document.getElementById("about-btn");
 const formClose = document.getElementById("form-close");
 const overlayForm = document.querySelector(".overlayForm");
 
 formClose.addEventListener("click", disableOverlayForm);
 announcement.addEventListener("click", enableOverlayForm);
+aboutBtn.addEventListener("click", enableOverlayForm);
+mainBtn.addEventListener("click", enableOverlayForm);
+
 
 function enableOverlayForm() {
   overlayForm.style.display = "flex";
@@ -886,14 +531,14 @@ function disableOverlayForm() {
   });
 }
 
-document.querySelector(".sidenav-left img").addEventListener("click", () => {
-  gsap.to(".sidenav-left", {
-    duration: 2,
-    y: -1500,
-    ease: "bounce",
-  });
-  overlayForm.style.display = "flex";
-});
+// document.querySelector(".sidenav-left img").addEventListener("click", () => {
+//   gsap.to(".sidenav-left", {
+//     duration: 2,
+//     y: -1500,
+//     ease: "bounce",
+//   });
+//   overlayForm.style.display = "flex";
+// });
 
 
 // ==================== Start Contact Form ============================
@@ -933,6 +578,8 @@ submitButton.addEventListener("click", (e) => {
   //Get Form Values
   let name = document.getElementById("name").value;
   let email = document.getElementById("email").value;
+  let phone = document.getElementById("phone").value;
+  let message = document.getElementById("message").value;
   // let country = document.getElementById("country").value;
 
   firestore
@@ -953,6 +600,9 @@ submitButton.addEventListener("click", (e) => {
     .set({
       name: name,
       email: email,
+      phone: phone,
+      message: message,
+
       // country: country,
     })
     .then(() => { })
@@ -970,15 +620,11 @@ submitButton.addEventListener("click", (e) => {
   clearForm()
 });
 
-// ==================== End Contact Form ============================
+// ==================== End Contact Form ========================================
 
-document.getElementById("PopupForm")
-  .addEventListener("click", function () {
-    document.querySelector(".overlayForm")
-      .style.display = "flex";
-  });
 
-  // ================================================================
+
+  // =============================================================================
 
 
   
@@ -1182,7 +828,7 @@ document.getElementById("PopupForm")
   // ======================================================================
 
 
-  // ==================================================================
+  // ======================================================================
 
   console.clear();
 
@@ -1256,4 +902,125 @@ var master = gsap.timeline()
 .add(marquee(Projectno02, 40, ProjectdirFromRight),0)
 
 
+// =========================================================================================================================
 
+let $ = document;
+let slider = $.querySelector(".slider");
+let sliderItem = $.querySelectorAll(".slider-item");
+
+let preBtnSlider = $.getElementById("pre-btn-slider");
+let nextBtnSlider = $.getElementById("next-btn-slider");
+let bgSlider = $.querySelector(".bg-slider");
+let slideContentH2 = $.querySelector(".slide-content h2");
+let slideContentP = $.querySelector(".slide-content p");
+let slideContentAnchor = $.querySelector(".slide-content a");
+sliderItem = Array.from(sliderItem);
+let currentPosition = 200;
+let firstItemCurentPosition = currentPosition;
+let nextItemForActive = 0;
+let autoPreMoveSlide;
+for (let item = 0; item < sliderItem.length; item++) {
+  sliderItem[item].style.right = `${
+    currentPosition - firstItemCurentPosition
+  }px`;
+  firstItemCurentPosition = firstItemCurentPosition - firstItemCurentPosition;
+  currentPosition = currentPosition - 225;
+}
+lastItemPosition = currentPosition + 225;
+console.log(
+  getComputedStyle(sliderItem[sliderItem.length - 1]).getPropertyValue("right")
+);
+let currentPositionItem = 0;
+let defualtWidth = sliderItem[1].offsetWidth;
+let defualtHeight = sliderItem[1].offsetHeight;
+$.addEventListener("DOMContentLoaded", () => {
+  preBtnSlider.addEventListener("click", preMoveSlid);
+});
+slideContentH2.innerHTML =
+  sliderItem[0].lastElementChild.firstElementChild.firstElementChild.textContent;
+slideContentP.innerHTML =
+  sliderItem[0].lastElementChild.lastElementChild.previousElementSibling.firstElementChild.textContent;
+slideContentAnchor.innerHTML =
+  sliderItem[0].lastElementChild.lastElementChild.textContent;
+slideContentAnchor.setAttribute(
+  "href",
+  sliderItem[0].lastElementChild.lastElementChild.getAttribute("href")
+);
+function preMoveSlid() {
+  preBtnSlider.setAttribute("disabled", " ");
+  for (let i = 0; i < sliderItem.length; i++) {
+    currentPositionItem = getComputedStyle(sliderItem[i]).getPropertyValue(
+      "right"
+    );
+
+    if (
+      sliderItem[i].classList.contains("activeBgc") ||
+      parseFloat(getComputedStyle(sliderItem[i]).getPropertyValue("right")) >=
+        parseFloat("200px")
+    ) {
+      sliderItem[i].classList.remove("activeBgc");
+
+      console.log(sliderItem[i].nextElementSibling);
+      if (
+        sliderItem[i].nextElementSibling == null ||
+        sliderItem[i].nextElementSibling.classList.contains("slider-item") !=
+          true
+      ) {
+        nextItemForActive = sliderItem[0];
+      } else {
+        nextItemForActive = sliderItem[i].nextElementSibling;
+      }
+      sliderItem[i].style.right = `${lastItemPosition}px`;
+    } else {
+      sliderItem[i].style.right = `${parseInt(currentPositionItem) + 225}px`;
+    }
+  }
+
+  nextItemForActive.style.transition = "all 0.5s";
+  nextItemForActive.classList.add("activeBgc");
+  slideContentH2.innerHTML =
+    nextItemForActive.lastElementChild.firstElementChild.firstElementChild.textContent;
+  slideContentP.innerHTML =
+    nextItemForActive.lastElementChild.lastElementChild.previousElementSibling.firstElementChild.textContent;
+  slideContentAnchor.innerHTML =
+    nextItemForActive.lastElementChild.lastElementChild.textContent;
+  slideContentAnchor.setAttribute(
+    "href",
+    nextItemForActive.lastElementChild.lastElementChild.getAttribute("href")
+  );
+  nextItemForActive.style.right = "0";
+  setTimeout(() => {
+    preBtnSlider.removeAttribute("disabled");
+  }, 600);
+}
+
+function autoPlaySlider() {
+  for (let w = 0; w < sliderItem.length; w++) {
+    if (
+      parseFloat(getComputedStyle(sliderItem[w]).getPropertyValue("right")) <
+      -450
+    ) {
+      sliderItem[w].style.opacity = "0";
+    } else if (
+      parseFloat(getComputedStyle(sliderItem[w]).getPropertyValue("right")) >
+      -450
+    ) {
+      sliderItem[w].style.opacity = "10";
+    }
+  }
+  for (let w = 0; w < sliderItem.length; w++) {
+    if (
+      parseFloat(getComputedStyle(sliderItem[w]).getPropertyValue("right")) <=
+      -250
+    ) {
+      sliderItem[w].classList.add("activeSmall");
+    } else if (
+      parseFloat(getComputedStyle(sliderItem[w]).getPropertyValue("right")) >
+      -250
+    ) {
+      sliderItem[w].classList.remove("activeSmall");
+    }
+  }
+}
+
+setInterval(autoPlaySlider, 1);
